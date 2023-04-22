@@ -29,21 +29,23 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    </head>
    <body>
+      
+
       <!-- header section start -->
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"href="index.html"><img src="logo.png"></a>
+               <a class="navbar-brand"href="index.php"><img src="logo.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
+                        <a class="nav-link" href="index.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
+                        <a class="nav-link" href="about.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="restaurante.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Restaurantes</a>
@@ -52,8 +54,8 @@
                   <form class="form-inline my-2 my-lg-0">
                      <div class="login_bt">
                         <ul>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                           <li><a href="login.php">Login</a></li>
+                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                         </ul>
                      </div>
                   </form>
@@ -103,8 +105,8 @@
                      <h2 class="useful_text">Links</h2>
                      <div class="footer_menu">
                         <ul>
-                           <li class="active"><a href="index.html">Home</a></li>
-                           <li><a href="about.html">Sobre nós</a></li>
+                           <li class="active"><a href="index.php">Home</a></li>
+                           <li><a href="about.php">Sobre nós</a></li>
                            <li><a href="restaurante.php">Restaurantes</a></li>
                         </ul>
                      </div>

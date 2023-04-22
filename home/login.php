@@ -1,3 +1,25 @@
+<?php
+    if(isset($_POST['email']) and !empty($_POST['email'])){
+        $email = $_POST['email'];
+        $senha = $_POST['password'];
+
+        require_once 'connect.php';
+        $sql = "SELECT * FROM clientes WHERE email='$email' and senha='$senha'";
+        $exec = $conn->query($sql);
+        if($exec->num_rows > 0){
+            session_start();
+            while ($linhas = $exec->fetch_object()){
+                $_SESSION['login'] = $linhas->email;
+                $_SESSION['nome'] = $linhas->email;
+            }
+            header('Location: restaurante.php');
+        }else{
+            header('Location: login.php?msg=1');
+        }
+
+    }
+?>
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -9,7 +31,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>About</title>
+      <title>42.0 Delivery</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -30,55 +52,63 @@
    </head>
    <body>
       <!-- header section start -->
-      <div class="header_section header_bg">
+      <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"href="index.html"><img src="logo.png"></a>
+               <a class="navbar-brand"href="index.php"><img src="logo.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
+                        <a class="nav-link" href="index.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
                      </li>
-                     <li class="nav-item active">
-                        <a class="nav-link" href="about.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="restaurante.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Restaurantes</a>
-                     </li>
+                     </li> 
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                     <div class="login_bt">
+                     <div class="login_bt active">
                         <ul>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                           <li><a href="login.php">Login</a></li>
+                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                         </ul>
                      </div>
                   </form>
                </div>
             </nav>
          </div>
-      </div>
-      <!-- header section end -->
-      <!-- about section start -->
-      <div class="about_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="about_img"><img src="images/about-img.png"></div>
-               </div>
-               <div class="col-md-6">
-                  <div class="about_taital_main">
-                     <div class="about_taital">Sobre nós</div>
-                     <p class="about_text">Sistema Web desenvolvido por alunos do 3° ADS da universidade FAEX.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- about section end -->
+         <!-- banner section start --> 
+
+        <!--FORMULÁRIO LOGIN START-->
+
+        <div class="container form-login">
+            <form>
+                <div class="form-group">
+                    <label for="email">Endereço de Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                    <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seu email com ninguém.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" id="password" placeholder="Senha">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
+                </div>
+                <button formaction="register.php" class="btn btn-danger ">Register</button>
+                <button type="submit" class="btn btn-primary login-button">Login</button>
+            </form>
+        </div>
+
+
+        <!--FORMULÁRIO LOGIN END-->
+
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
@@ -92,8 +122,8 @@
                      <h2 class="useful_text">Links</h2>
                      <div class="footer_menu">
                         <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li class="active"><a href="about.html">Sobre nós</a></li>
+                           <li class="active"><a href="index.php">Home</a></li>
+                           <li><a href="about.php">Sobre nós</a></li>
                            <li><a href="restaurante.php">Restaurantes</a></li>
                         </ul>
                      </div>

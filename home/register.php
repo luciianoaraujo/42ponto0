@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<?php
-    session_start();
-    if(!isset($_SESSION['login'])){
-        header('Location: login.php');
-    }
-?>
 <html>
    <head>
       <!-- basic -->
@@ -39,24 +33,24 @@
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"href="index.php"><img src="logo.png"></a>
+               <a class="navbar-brand"href="index.html"><img src="logo.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="index.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
+                        <a class="nav-link" href="index.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
+                        <a class="nav-link" href="about.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
                      </li>
-                     <li class="nav-item active">
+                     <li class="nav-item">
                         <a class="nav-link" href="restaurante.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Restaurantes</a>
                      </li> 
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                     <div class="login_bt">
+                     <div class="login_bt active">
                         <ul>
                            <li><a href="login.php">Login</a></li>
                            <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
@@ -65,51 +59,29 @@
                   </form>
                </div>
             </nav>
-         </div>      
+         </div>
+         <!-- banner section start --> 
+
+        <!--FORMULÁRIO REGISTER START-->
+
+        <div class="container form-login">
+            <form>
+                <div class="form-group">
+                    <label for="email">Endereço de Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                    <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seu email com ninguém.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                </div>
+                
+                <button type="submit" class="btn btn-danger ">Register</button>
+            </form>
         </div>
-         <!-- CONTEUDO RESTAURANTES --> 
-        
-<?php
-   require_once 'connect.php';
-   // Consulta os restaurantes
-   $exec = $conn->query('SELECT * FROM estabelecimentos');
 
-   // Define o número de colunas desejado
-   $num_colunas = 3;
-   $coluna_atual = 0;
 
-   // Loop para criar os containers
-   while ($estabelecimento = $exec->fetch()) {
-      // Abre uma nova linha para cada nova coluna
-      if ($coluna_atual % $num_colunas == 0) {
-         echo '<div class="row">';
-      }  
-
-      // Cria o container com informações do estabelecimento
-      echo '<div class="col-md-4">';
-      echo '<div class="card">';
-      echo '<img class="card-img-top"" src="' . $estabelecimento['imagem'] . '">';
-      echo '<div class="card-body">';
-      echo '<h5 class="card-title nome-estabelecimento">' . $estabelecimento['nome'] . '</h5>';
-      echo '<a href="#" class="btn btn-primary">Ver Cardápio</a>';
-      echo '</div>';
-      echo '</div>';
-      echo '</div>';
-
-      // Fecha a linha atual após a última coluna
-      if ($coluna_atual % $num_colunas == $num_colunas - 1) {
-         echo '</div>';
-      }
-
-      $coluna_atual++;
-   }
-
-   // Fecha a última linha, caso necessário
-   if ($coluna_atual % $num_colunas != 0) {
-      echo '</div>';
-   }
-?>
-      
+        <!--FORMULÁRIO LOGIN END-->
 
       <!-- footer section start -->
       <div class="footer_section layout_padding">
@@ -124,9 +96,9 @@
                      <h2 class="useful_text">Links</h2>
                      <div class="footer_menu">
                         <ul>
-                           <li><a href="index.php">Home</a></li>
-                           <li><a href="about.php">Sobre nós</a></li>
-                           <li class="active"><a href="restaurante.php">Restaurantes</a></li>
+                           <li class="active"><a href="index.html">Home</a></li>
+                           <li><a href="about.html">Sobre nós</a></li>
+                           <li><a href="restaurante.php">Restaurantes</a></li>
                         </ul>
                      </div>
                   </div>
