@@ -63,47 +63,47 @@
         </div>
          <!-- CONTEUDO RESTAURANTES --> 
         
-         <?php
-    // Conecta ao banco de dados
-    $conn = new PDO('mysql:host=localhost;dbname=delivery', 'root', '966969ab');
+<?php
+   // Conecta ao banco de dados
+   $conn = new PDO('mysql:host=localhost;dbname=delivery', 'root', '');
 
-    // Consulta os restaurantes
-    $stmt = $conn->query('SELECT * FROM estabelecimentos');
+   // Consulta os restaurantes
+   $stmt = $conn->query('SELECT * FROM estabelecimentos');
 
-    // Define o número de colunas desejado
-    $num_colunas = 3;
-    $coluna_atual = 0;
+   // Define o número de colunas desejado
+   $num_colunas = 3;
+   $coluna_atual = 0;
 
-    // Loop para criar os containers
-    while ($estabelecimento = $stmt->fetch()) {
-        // Abre uma nova linha para cada nova coluna
-        if ($coluna_atual % $num_colunas == 0) {
-            echo '<div class="row">';
-        }
+   // Loop para criar os containers
+   while ($estabelecimento = $stmt->fetch()) {
+      // Abre uma nova linha para cada nova coluna
+      if ($coluna_atual % $num_colunas == 0) {
+         echo '<div class="row">';
+      }
 
-        // Cria o container com informações do estabelecimento
-        echo '<div class="col-md-4">';
-        echo '<div class="card">';
-        echo '<img class="card-img-top"" src="' . $estabelecimento['imagem'] . '">';
-        echo '<div class="card-body">';
-        echo '<h5 class="card-title nome-estabelecimento">' . $estabelecimento['nome'] . '</h5>';
-        echo '<a href="#" class="btn btn-primary">Ver Cardápio</a>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
+      // Cria o container com informações do estabelecimento
+      echo '<div class="col-md-4">';
+      echo '<div class="card">';
+      echo '<img class="card-img-top"" src="' . $estabelecimento['imagem'] . '">';
+      echo '<div class="card-body">';
+      echo '<h5 class="card-title nome-estabelecimento">' . $estabelecimento['nome'] . '</h5>';
+      echo '<a href="#" class="btn btn-primary">Ver Cardápio</a>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
 
-        // Fecha a linha atual após a última coluna
-        if ($coluna_atual % $num_colunas == $num_colunas - 1) {
-            echo '</div>';
-        }
+      // Fecha a linha atual após a última coluna
+      if ($coluna_atual % $num_colunas == $num_colunas - 1) {
+         echo '</div>';
+      }
 
-        $coluna_atual++;
-    }
+      $coluna_atual++;
+   }
 
-    // Fecha a última linha, caso necessário
-    if ($coluna_atual % $num_colunas != 0) {
-        echo '</div>';
-    }
+   // Fecha a última linha, caso necessário
+   if ($coluna_atual % $num_colunas != 0) {
+      echo '</div>';
+   }
 ?>
       
 
@@ -122,7 +122,7 @@
                         <ul>
                            <li><a href="index.html">Home</a></li>
                            <li><a href="about.html">Sobre nós</a></li>
-                           <li class="active"><a href="restaurante.html">Restaurantes</a></li>
+                           <li class="active"><a href="restaurante.php">Restaurantes</a></li>
                         </ul>
                      </div>
                   </div>
