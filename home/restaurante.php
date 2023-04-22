@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <?php
-    session_start();
-    if(!isset($_SESSION['login'])){
-        header('Location: login.php');
-    }
+   session_start(); // Inicia a sessão
+
+   // Verifica se o usuário está logado, redireciona para a página de login
+   if(!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+       header('Location: login.php');
+       exit;
+   }
 ?>
 <html>
    <head>

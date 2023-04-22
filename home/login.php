@@ -1,4 +1,5 @@
 <?php
+    session_start(); // Inicia a sessão
     if(isset($_POST['email']) and !empty($_POST['email'])){
         $email = $_POST['email'];
         $senha = $_POST['password'];
@@ -7,18 +8,19 @@
         $sql = "SELECT * FROM clientes WHERE email='$email' and senha='$senha'";
         $exec = $conn->query($sql);
         if($exec->num_rows > 0){
-            session_start();
-            while ($linhas = $exec->fetch_object()){
-                $_SESSION['login'] = $linhas->email;
-                $_SESSION['nome'] = $linhas->email;
-            }
-            header('Location: restaurante.php');
-        }else{
-            header('Location: login.php?msg=1');
+            // Login válido
+            $_SESSION['email'] = $email; // Armazena o e-mail do usuário na sessão
+            header('Location: restaurante.php'); // Redireciona para a página do restaurante
+            exit(); // Encerra o script
         }
+        else{
+            header('Location: login.php?msg=1');
+            exit(); // Encerra o script
+         }
 
     }
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -87,24 +89,32 @@
         <!--FORMULÁRIO LOGIN START-->
 
         <div class="container form-login">
-            <form>
-                <div class="form-group">
-                    <label for="email">Endereço de Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email">
-                    <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seu email com ninguém.</small>
-                </div>
-                <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" class="form-control" id="password" placeholder="Senha">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="check">
-                    <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
-                </div>
-                <button formaction="register.php" class="btn btn-danger ">Register</button>
-                <button type="submit" class="btn btn-primary login-button">Login</button>
+            <form method="post" action="login.php">
+               <?php
+               if(isset($_GET['msg'])){
+                  echo '<div class="alert alert-danger" role="alert">
+                     Informações inválidas!
+                  </div>';
+               }
+               ?>
+               <div class="form-group">
+                  <label for="email">Endereço de Email</label>
+                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                  <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seu email com ninguém.</small>
+               </div>
+               <div class="form-group">
+                  <label for="password">Senha</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+               </div>
+               <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="check">
+                  <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
+               </div>
+                  <button formaction="register.php" class="btn btn-danger ">Register</button>
+                  <button type="submit" class="btn btn-primary login-button">Login</button>
             </form>
         </div>
+
 
 
         <!--FORMULÁRIO LOGIN END-->
