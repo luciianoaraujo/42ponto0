@@ -120,8 +120,10 @@
                   <input type="checkbox" class="form-check-input" id="check">
                   <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
                </div>
-                  <button formaction="register.php" class="btn btn-danger ">Register</button>
-                  <button type="submit" class="btn btn-primary login-button">Login</button>
+               <div class = "buttons">
+                  <button formaction="register.php">Register</button>
+                  <button type="submit">Login</button>
+               </div>
             </form>
         </div>
 

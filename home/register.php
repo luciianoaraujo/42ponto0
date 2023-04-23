@@ -54,10 +54,10 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
+                        <a class="nav-link" href="index.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
+                        <a class="nav-link" href="about.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="restaurante.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Restaurantes</a>
@@ -113,8 +113,9 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                   <label for="senha">Senha</label>
                   <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
                </div>
-                
-               <button type="submit" class="btn btn-danger ">Register</button>
+               <div class = "buttons">
+               <button type="submit">Register</button>
+               </div>               
             </form>
         </div>
 
@@ -134,8 +135,8 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                      <h2 class="useful_text">Links</h2>
                      <div class="footer_menu">
                         <ul>
-                           <li class="active"><a href="index.html">Home</a></li>
-                           <li><a href="about.html">Sobre nós</a></li>
+                           <li class="active"><a href="index.php">Home</a></li>
+                           <li><a href="about.php">Sobre nós</a></li>
                            <li><a href="restaurante.php">Restaurantes</a></li>
                         </ul>
                      </div>

@@ -95,7 +95,7 @@
             } else {
                 echo '<div class="row">';
                 while ($produto = $exec->fetch()) {
-                    echo '<div class="col-md-2">';
+                    echo '<div class="col-md-3">';
                     echo '<div class="card cardapio-card" id="produto-' . $produto['id_produto'] . '">';
                     echo '<div class="card-body">';
                     echo '<h5 class="card-title">' . $produto['nome'] . '</h5>';
@@ -110,7 +110,7 @@
                     echo '<button class="btn btn-outline-secondary add-quantidade" type="button" id="plus-' . $produto['id_produto'] . '">+</button>';
                     echo '</div>';
                     echo '</div>';
-                    echo '<button type="button" class="btn btn-primary add-pedido">Adicionar ao Pedido</button>';
+                    echo '<button type="button" class="button-85 add-pedido">Adicionar ao Pedido</button>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';

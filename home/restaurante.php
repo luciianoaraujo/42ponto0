@@ -107,7 +107,7 @@
       echo '<img class="card-img-top"" src="' . $estabelecimento['imagem'] . '">';
       echo '<div class="card-body">';
       echo '<h5 class="card-title nome-estabelecimento">' . $estabelecimento['nome'] . '</h5>';
-      echo '<a href="cardapio.php?id=' . $estabelecimento['id_estabelecimento'] . '" class="btn btn-primary">Ver Cardápio</a>';
+      echo '<a href="cardapio.php?id=' . $estabelecimento['id_estabelecimento'] . '" class="button-85">Ver Cardápio</a>';
       echo '</div>';
       echo '</div>';
       echo '</div>';
