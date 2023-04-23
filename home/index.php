@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $logged_in = isset($_SESSION['email']) && !empty($_SESSION['email']);
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -54,9 +58,17 @@
                   <form class="form-inline my-2 my-lg-0">
                      <div class="login_bt">
                         <ul>
-                           <li><a href="login.php">Login</a></li>
-                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        </ul>
+                        <?php 
+                        if ($logged_in){
+                           echo '<li><a href="logout.php">Logout</a></li>
+                                 <li><a href="logout.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                              }
+                        else{ 
+                           echo '<li><a href="login.php">Login</a></li>
+                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                        }
+                        ?>
+                        </ul>  
                      </div>
                   </form>
                </div>
@@ -93,7 +105,7 @@
       </div>
 
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
+      <div class="footer_section layout_padding footer">
          <div class="container">
             <div class="footer_section_2">
                <div class="row">
@@ -132,15 +144,16 @@
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
+         </div> 
+         <div class="copyright_section">
          <div class="container">
             <p class="copyright_text">2023 Todos Direitos Reservados. Design by <a href="faex.edu.br">42.0 delivery.</a></p>
          </div>
       </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+     
       <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>

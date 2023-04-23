@@ -1,5 +1,8 @@
 <?php
-    session_start(); // Inicia a sessão
+    $logged_in = isset($_SESSION['email']) && !empty($_SESSION['email']);
+?>
+
+<?php
     if(isset($_POST['email']) and !empty($_POST['email'])){
         $email = $_POST['email'];
         $senha = $_POST['password'];
@@ -7,8 +10,8 @@
         require_once 'connect.php';
         $sql = "SELECT * FROM clientes WHERE email='$email' and senha='$senha'";
         $exec = $conn->query($sql);
-        if($exec->num_rows > 0){
-            // Login válido
+        if($exec->rowCount() > 0){
+            session_start();
             $_SESSION['email'] = $email; // Armazena o e-mail do usuário na sessão
             header('Location: restaurante.php'); // Redireciona para a página do restaurante
             exit(); // Encerra o script
@@ -16,8 +19,7 @@
         else{
             header('Location: login.php?msg=1');
             exit(); // Encerra o script
-         }
-
+        }        
     }
 ?>
 
@@ -76,8 +78,16 @@
                   <form class="form-inline my-2 my-lg-0">
                      <div class="login_bt active">
                         <ul>
-                           <li><a href="login.php">Login</a></li>
-                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                        <?php 
+                            if ($logged_in){
+                            echo '<li><a href="logout.php">Logout</a></li>
+                                    <li><a href="logout.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                                }
+                            else{ 
+                            echo '<li><a href="login.php">Login</a></li>
+                            <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                            }
+                        ?>
                         </ul>
                      </div>
                   </form>

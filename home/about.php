@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    $logged_in = isset($_SESSION['email']) && !empty($_SESSION['email']);
+?>
 <html>
    <head>
       <!-- basic -->
@@ -52,8 +56,16 @@
                   <form class="form-inline my-2 my-lg-0">
                      <div class="login_bt">
                         <ul>
-                           <li><a href="login.php">Login</a></li>
-                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                        <?php 
+                           if ($logged_in){
+                              echo '<li><a href="logout.php">Logout</a></li>
+                                    <li><a href="logout.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                           }
+                           else{ 
+                              echo '<li><a href="login.php">Login</a></li>
+                              <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                           }
+                        ?>
                         </ul>
                      </div>
                   </form>

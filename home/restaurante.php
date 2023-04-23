@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+
 <?php
    session_start(); // Inicia a sessão
 
    // Verifica se o usuário está logado, redireciona para a página de login
    if(!isset($_SESSION['email']) || empty($_SESSION['email'])) {
        header('Location: login.php');
-       exit;
+       
    }
 ?>
 <html>
    <head>
+    
+
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,8 +64,18 @@
                   <form class="form-inline my-2 my-lg-0">
                      <div class="login_bt">
                         <ul>
-                           <li><a href="login.php">Login</a></li>
-                           <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                           <?php
+                              if(isset($_SESSION['email']) and !empty($_SESSION['email'])){
+                                 // Usuário está logado, exibe o botão de logout
+                                 echo '<li><a href="logout.php">Logout</a></li>
+                                       <li><a href="logout.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                             }
+                             else{
+                                 // Usuário não está logado, exibe o botão de login
+                                 echo '<li><a href="login.php">Login</a></li>
+                                       <li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>';
+                              }
+                           ?>  
                         </ul>
                      </div>
                   </form>
@@ -89,12 +102,12 @@
       }  
 
       // Cria o container com informações do estabelecimento
-      echo '<div class="col-md-4">';
+      echo '<div class="col-md-3 img-restaurante">';
       echo '<div class="card">';
       echo '<img class="card-img-top"" src="' . $estabelecimento['imagem'] . '">';
       echo '<div class="card-body">';
       echo '<h5 class="card-title nome-estabelecimento">' . $estabelecimento['nome'] . '</h5>';
-      echo '<a href="#" class="btn btn-primary">Ver Cardápio</a>';
+      echo '<a href="cardapio.php?id=' . $estabelecimento['id_estabelecimento'] . '" class="btn btn-primary">Ver Cardápio</a>';
       echo '</div>';
       echo '</div>';
       echo '</div>';

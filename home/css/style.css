@@ -1077,3 +1077,24 @@ textarea#comment.massage-bt::placeholder {
 .login-button{
     float: right;
 }
+
+.img-restaurante{
+    margin:auto;
+    margin-bottom: 3%;
+}
+
+.cardapio-card {
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+

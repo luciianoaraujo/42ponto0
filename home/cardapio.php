@@ -1,20 +1,18 @@
+<!DOCTYPE html>
+
 <?php
-session_start();
-if(isset($_POST['nome']) and !empty($_POST['nome'])){
-   $nome_post = $_POST['nome'];
-   $email_post = $_POST['email'];
-   $telefone_post = $_POST['telefone'];
-   $endereco_post = $_POST['endereco'];    
-   $senha_post = $_POST['senha'];
-   require_once 'connect.php';
-   $sql = "INSERT INTO clientes VALUES(NULL, '$nome_post','$email_post','$telefone_post','$endereco_post','$senha_post')";
-   $exec = $conn->query($sql);
-   header('location: login.php');
+   session_start(); // Inicia a sessão
+
+   // Verifica se o usuário está logado, redireciona para a página de login
+   if(!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+       header('Location: login.php');
+       
    }
 ?>
-<!DOCTYPE html>
 <html>
    <head>
+    
+
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,24 +45,24 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"href="index.html"><img src="logo.png"></a>
+               <a class="navbar-brand"href="index.php"><img src="logo.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
+                        <a class="nav-link" href="index.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Página Inicial</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
+                        <a class="nav-link" href="about.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Sobre</a>
                      </li>
-                     <li class="nav-item">
+                     <li class="nav-item active">
                         <a class="nav-link" href="restaurante.php"><span class="padding5"><i class="fa fa-angle-right"></i></span>Restaurantes</a>
                      </li> 
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                     <div class="login_bt active">
+                     <div class="login_bt">
                         <ul>
                            <?php
                               if(isset($_SESSION['email']) and !empty($_SESSION['email'])){
@@ -83,46 +81,50 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                   </form>
                </div>
             </nav>
-         </div>
-         <!-- banner section start --> 
-
-        <!--FORMULÁRIO REGISTER START-->
-
-        <div class="container form-login">
-            <form method="post">
-               <div>
-                  <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seus dados com ninguém.</small>
-               </div>
-               <div class="form-group">
-                  <label for="nome">Nome</label>
-                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome">
-               </div>
-               <div class="form-group">
-                  <label for="email">Endereço de Email</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu mail">
-               </div>
-               <div class="form-group">
-                  <label for="telefone">Telefone</label>
-                  <input type="text" class="form-control" id="telefone"name="telefone" placeholder="(__) _.____-____">
-               </div>
-               <div class="form-group">
-                  <label for="endereço">Endereço Completo</label>
-                  <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite sua rua e numero">
-               </div>
-               <div class="form-group">
-                  <label for="senha">Senha</label>
-                  <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
-               </div>
-                
-               <button type="submit" class="btn btn-danger ">Register</button>
-            </form>
+         </div>      
         </div>
+        <!-- START ITENS CARDAPIO -->
+
+        <?php
+            require_once 'connect.php';
+            $id = $_GET['id'];
+            $exec = $conn->query("SELECT * FROM produtos WHERE id_estabelecimento = $id");
+
+            if ($exec->rowCount() == 0) {
+                echo '<p>Nenhum item de cardápio cadastrado para este restaurante.</p>';
+            } else {
+                echo '<div class="row">';
+                while ($produto = $exec->fetch()) {
+                    echo '<div class="col-md-2">';
+                    echo '<div class="card cardapio-card" id="produto-' . $produto['id_produto'] . '">';
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">' . $produto['nome'] . '</h5>';
+                    echo '<p class="card-text line-clamp-3">' . $produto['descricao'] . '</p>';
+                    echo '<p class="card-text">' . $produto['valor'] . '</p>';
+                    echo '<div class="input-group mb-3">';
+                    echo '<div class="input-group-prepend">';
+                    echo '<button class="btn btn-outline-secondary minus-quantidade" type="button" id="minus-' . $produto['id_produto'] . '">-</button>';
+                    echo '</div>';
+                    echo '<input type="text" class="form-control quantidade" placeholder="Quantidade" aria-label="Quantidade" aria-describedby="basic-addon1" data-quantidade="0">';
+                    echo '<div class="input-group-append">';
+                    echo '<button class="btn btn-outline-secondary add-quantidade" type="button" id="plus-' . $produto['id_produto'] . '">+</button>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<button type="button" class="btn btn-primary add-pedido">Adicionar ao Pedido</button>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+
+                }
+                echo '</div>';
+            }
+        ?>
 
 
-        <!--FORMULÁRIO LOGIN END-->
+        
+        <!--END ITENS CARDAPIO-->
 
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
+        <div class="footer_section layout_padding">
          <div class="container">
             <div class="footer_section_2">
                <div class="row">
@@ -134,9 +136,9 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                      <h2 class="useful_text">Links</h2>
                      <div class="footer_menu">
                         <ul>
-                           <li class="active"><a href="index.html">Home</a></li>
-                           <li><a href="about.html">Sobre nós</a></li>
-                           <li><a href="restaurante.php">Restaurantes</a></li>
+                           <li><a href="index.php">Home</a></li>
+                           <li><a href="about.php">Sobre nós</a></li>
+                           <li class="active"><a href="restaurante.php">Restaurantes</a></li>
                         </ul>
                      </div>
                   </div>
@@ -172,6 +174,40 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
       </div>
       <!-- copyright section end -->
       <!-- Javascript files-->
+      <script>
+        document.querySelectorAll('.add-quantidade').forEach(function(botao) {
+        botao.addEventListener('click', function() {
+        // Encontra o input da quantidade para este item
+        var inputQuantidade = this.parentNode.parentNode.querySelector('.quantidade');
+        // Encontra a quantidade atual para este item
+        var quantidadeAtual = parseInt(inputQuantidade.getAttribute('data-quantidade'));
+        // Incrementa a quantidade em 1
+        var novaQuantidade = quantidadeAtual + 1;
+        // Atualiza o valor do campo de quantidade
+        inputQuantidade.value = novaQuantidade;
+        // Atualiza o valor do atributo data-quantidade
+        inputQuantidade.setAttribute('data-quantidade', novaQuantidade);
+            });
+        });
+
+        document.querySelectorAll('.minus-quantidade').forEach(function(botao) {
+        botao.addEventListener('click', function() {
+        // Encontra o input da quantidade para este item
+        var inputQuantidade = this.parentNode.parentNode.querySelector('.quantidade');
+        // Encontra a quantidade atual para este item
+        var quantidadeAtual = parseInt(inputQuantidade.getAttribute('data-quantidade'));
+        // Incrementa a quantidade em 1
+        var novaQuantidade = quantidadeAtual - 1;
+        if (novaQuantidade <= 0) {
+            novaQuantidade = 0;
+        }
+        // Atualiza o valor do campo de quantidade
+        inputQuantidade.value = novaQuantidade;
+        // Atualiza o valor do atributo data-quantidade
+        inputQuantidade.setAttribute('data-quantidade', novaQuantidade);
+            });
+        });
+    </script>       
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
