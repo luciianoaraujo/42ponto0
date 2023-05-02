@@ -2,28 +2,6 @@
     $logged_in = isset($_SESSION['email']) && !empty($_SESSION['email']);
 ?>
 
-<?php
-    if(isset($_POST['email']) and !empty($_POST['email'])){
-        $email = $_POST['email'];
-        $senha = $_POST['password'];
-
-        require_once 'connect.php';
-        $sql = "SELECT * FROM clientes WHERE email='$email' and senha='$senha'";
-        $exec = $conn->query($sql);
-        if($exec->rowCount() > 0){
-            session_start();
-            $_SESSION['email'] = $email; // Armazena o e-mail do usuário na sessão
-            header('Location: restaurante.php'); // Redireciona para a página do restaurante
-            exit(); // Encerra o script
-        }
-        else{
-            header('Location: login.php?msg=1');
-            exit(); // Encerra o script
-        }        
-    }
-?>
-
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -99,13 +77,11 @@
         <!--FORMULÁRIO LOGIN START-->
 
         <div class="container form-login">
-            <form method="post" action="login.php">
+            <form action="../bd/bdLogin.php" method="post">
                <?php
-               if(isset($_GET['msg'])){
-                  echo '<div class="alert alert-danger" role="alert">
-                     Informações inválidas!
-                  </div>';
-               }
+                  if(isset($_GET['msg'])){
+                     echo '<div class="alert alert-danger" role="alert"> Informações inválidas! </div>';
+                  }
                ?>
                <div class="form-group">
                   <label for="email">Endereço de Email</label>

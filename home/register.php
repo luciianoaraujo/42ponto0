@@ -1,17 +1,3 @@
-<?php
-session_start();
-if(isset($_POST['nome']) and !empty($_POST['nome'])){
-   $nome_post = $_POST['nome'];
-   $email_post = $_POST['email'];
-   $telefone_post = $_POST['telefone'];
-   $endereco_post = $_POST['endereco'];    
-   $senha_post = $_POST['senha'];
-   require_once 'connect.php';
-   $sql = "INSERT INTO clientes VALUES(NULL, '$nome_post','$email_post','$telefone_post','$endereco_post','$senha_post')";
-   $exec = $conn->query($sql);
-   header('location: login.php');
-   }
-?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -89,7 +75,7 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
         <!--FORMULÁRIO REGISTER START-->
 
         <div class="container form-login">
-            <form method="post">
+            <form action="../bd/bdRegister.php" method="post">
                <div>
                   <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seus dados com ninguém.</small>
                </div>
@@ -98,7 +84,7 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                   <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome">
                </div>
                <div class="form-group">
-                  <label for="email">Endereço de Email</label>
+                  <label for="email">Email</label>
                   <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu mail">
                </div>
                <div class="form-group">
@@ -108,6 +94,10 @@ if(isset($_POST['nome']) and !empty($_POST['nome'])){
                <div class="form-group">
                   <label for="endereço">Endereço Completo</label>
                   <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite sua rua e numero">
+               </div>
+               <div class="form-group">
+                  <label for="imagem">Logo</label>
+                  <input type="text" class="form-control" id="imagem" name="imagem" placeholder="Link da imagem">
                </div>
                <div class="form-group">
                   <label for="senha">Senha</label>

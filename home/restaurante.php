@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?php
    session_start(); // Inicia a sessão
 
@@ -9,6 +8,7 @@
        
    }
 ?>
+
 <html>
    <head>
     

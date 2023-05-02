@@ -1,0 +1,22 @@
+admin 
+	clientes                            OK/falta organizar
+	forma_pagamento                     tem que fazer
+	login                               OK/falta organizar
+	pedidos                             OK/falta organizar
+	produtos                            OK/falta organizar
+	produtos_categoria                  SLA
+	usuarios                            OK/falta organizar
+	index.php                           tem que fazer/talvez 
+	verificar_usuario.php               OK/falta organizar
+
+
+bd - banco de dados e query             OK/estamos fazendo 
+config – nome do projeto credenciais    OK
+produtos – layout para produtos         SLA
+index.php                               OK/ja esta organizado
+
+
+oque falta fazer?
+-
+-
+-
