@@ -1,5 +1,5 @@
 <?php 
-  require_once '../config.php'; 
+  require_once '../../includes/config.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +19,13 @@
     Favicons
     =============================================
     -->
-    <?php include_once ABSPATH.'inc/favicons.php';?>
+    <?php include_once ABSPATH.'../includes/favicons.php';?>
 
     <!--  
     Stylesheets
     =============================================
     -->
-    <?php include_once ABSPATH.'inc/stylesheets.php';?>
+    <?php include_once ABSPATH.'../includes/stylesheets.php';?>
 
 <!-- HEAD -->
   </head>
