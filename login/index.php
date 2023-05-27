@@ -56,7 +56,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h4 class="font-alt">Entrar ou Cadastrar na 42ponto0</h4>
+                <h4 class="font-alt">Entrar ou Cadastrar</h4>
                 <hr class="divider-w mb-10">
                 <!-- FORM POST -->
                 <form class="form" action="" method="post">

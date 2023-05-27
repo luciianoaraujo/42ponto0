@@ -16,7 +16,7 @@
         define('DB_PASSWORD', '');
         define('DB_HOST', 'localhost');
         if ( !defined('BASEURL') )
-            define('BASEURL', 'http://localhost/42.0delivery-main/');
+            define('BASEURL', 'http://localhost/42.0/42ponto0/');
     }
 
 ?>

@@ -78,6 +78,7 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
               <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>login"> <i class="icon-play"></i> + Seja parceiro </a>
+              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>login"> <i class="icon-play"></i> Login </a>
             </ul>
           </div>
         </div>
@@ -100,45 +101,54 @@
       <div class="main">
         <section class="module" id="alt-features">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-strategy"></span></div>
-                  <h3 class="alt-features-title font-alt">Branding</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+              <div class="row">
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                  <div class="alt-features-item">
+                    <div class="alt-features-icon"><span class="icon-strategy"></span></div>
+                      <h3 class="alt-features-title font-alt">Identidade Visual</h3>
+                      <p>Destaque-se com uma identidade visual única e memorável, que representa perfeitamente a essência do seu negócio.</p>
+                    </div>
+                    <div class="alt-features-item">
+                      <div class="alt-features-icon"><span class="icon-tools-2"></span></div>
+                      <h3 class="alt-features-title font-alt">Desenvolvedores</h3>
+                      <p>Equipe de desenvolvedores especializados dedicados a aprimorar a experiência do usuário.</p>
+                    </div>
+                    <div class="alt-features-item">
+                      <div class="alt-features-icon"><span class="icon-target"></span></div>
+                      <h3 class="alt-features-title font-alt">Marketing</h3>
+                      <p>Alcançamos o seu público-alvo com estratégias de marketing eficazes para aumentar a visibilidade e a adoção do nosso app.</p>
+                    </div>
+                    <div class="alt-features-item">
+                      <div class="alt-features-icon"><span class="icon-tools"></span></div>
+                      <h3 class="alt-features-title font-alt">Design</h3>
+                      <p>Design atraente e intuitivo que proporciona uma experiência de usuário excepcional ao navegar pelo nosso app de cardápio online.</p>
+                    </div>
                 </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="alt-features-title font-alt">Desenvolvedores</h3>
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-target"></span></div>
-                  <h3 class="alt-features-title font-alt">Marketing</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="alt-features-title font-alt">Design</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
-                </div>
-              </div>
               <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
-                <div class="alt-services-image align-center"><img src="<?php echo BASEURL;?>assets/images/landing/feature.png" alt="Feature Image"></div>
+                <div class="alt-services-image align-center"><img src="<?php echo BASEURL;?>assets/images/landing/feature.png" alt="Imagem do recurso"></div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-camera"></span></div>
-                  <h3 class="alt-features-title font-alt">Photography</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Fotografia</h3>
+                  <p>Mostre a beleza dos seus pratos com imagens incríveis e apetitosas.</p>
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-mobile"></span></div>
-                  <h3 class="alt-features-title font-alt">Mobile</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Mobile</h3>
+                  <p>Acesse o cardápio de restaurantes em qualquer lugar e a qualquer hora através do nosso app.</p>
                 </div>
                 <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-linegraph"></span></div>
-                  <h3 class="alt-features-title font-alt">Music</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                <div class="alt-features-icon"><span class="icon-linegraph"></span></div>
+                  <h3 class="alt-features-title font-alt">Crescimento</h3>
+                  <p>Impulsione seu negócio. Cadastre-se como estabelecimento e experimente um crescimento excepcional em seu negócio.</p>
                 </div>
                 <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-basket"></span></div>
-                  <h3 class="alt-features-title font-alt">Shop</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                <div class="alt-features-icon"><span class="icon-basket"></span></div>
+                  <h3 class="alt-features-title font-alt">Loja</h3>
+                  <p>Explore nossa loja virtual e adquira produtos relacionados ao seu restaurante diretamente pelo nosso aplicativo.</p>
                 </div>
+
               </div>
             </div>
           </div>
@@ -148,8 +158,8 @@
             <div class="row">
               <div class="col-sm-6"><img src="<?php echo BASEURL;?>assets/images/landing/why_choose.png" alt=""></div>
               <div class="col-sm-6">
-                <h2 class="module-title font-alt align-left">Why Titan is best</h2>
-                <p class="module-subtitle font-serif align-left">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2 class="module-title font-alt align-left">Por que escolher 42pont0?</h2>
+                <p class="module-subtitle font-serif align-left">Impulsione o seu negócio com o 42pont0 - a solução perfeita para seu estabelecimento. Tenha controle total, design atrativo e aumento nas vendas. Descubra o poder da simplicidade e transforme sua experiência gastronômica.</p>
               </div>
             </div>
           </div>
@@ -157,23 +167,17 @@
         <section>
           <div class="container">
             <div class="row landing-image-text">
-              <div class="col-sm-6 col-sm-push-6"><img class="center-block" src="<?php echo BASEURL;?>assets/images/landing/ipad.png" alt=""></div>
-              <div class="col-sm-6 col-sm-pull-6">
-                <h2 class="font-alt">Keep the conversation going</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <!--<a class="btn btn-border-d btn-circle" href="#">Try free version</a>-->
-              </div>
-            </div>
-            <div class="row landing-image-text">
               <div class="col-sm-6"><img class="center-block" src="<?php echo BASEURL;?>assets/images/landing/iphone-mockup.png" alt=""></div>
-              <div class="col-sm-6">
-                <h2 class="font-alt">How it works</h2>
-                <p class="font-serif">Lorem ipsum dolor sitamet consectetur adipisicing elit ullamut consequatur repellendus amet nemo dignissimos possimus eius fugiat</p>
+                <div class="col-sm-6">
+                  <h2 class="font-alt">Como funciona?</h2>
+                  <p class="font-serif">No 42ponto0 você conta com diversas vantagens para seu negócio.</p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
-                  <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse</li>
-                  <li>Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-                </ul> <!--<a class="btn btn-border-d btn-circle" href="<?php echo BASEURL;?>#">Download App</a>-->
+                  <li>Crie seu cardápio: Adicione seus pratos, bebidas e opções personalizadas ao cardápio digital de forma fácil e intuitiva.</li>
+                  <li>Personalize sua aparência: Escolha um layout atraente e personalize o design para refletir a identidade visual do seu negócio.</li>
+                  <li>Receba pedidos: Receba pedidos diretamente no app e seja notificado instantaneamente. Gerencie e acompanhe os pedidos de forma eficiente.</li>
+                  <li>Comunique-se com os clientes: Mantenha uma comunicação direta com seus clientes por meio de mensagens e notificações para fornecer atualizações e promoções especiais.</li>
+                  <li>Gerencie seu negócio: Acesse relatórios e estatísticas para analisar o desempenho do seu negócio, identificar tendências e tomar decisões informadas.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -182,8 +186,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">ScreenShots</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">Como será o app?</h2>
+                <div class="module-subtitle font-serif">Trabalhamos para que o design seja o mais intuitivo possível, priorizamos a acessibilidade do usuário.</div>
               </div>
             </div>
             <div class="row client">
@@ -240,7 +244,7 @@
     <script src="<?php echo BASEURL;?>assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
     <script src="<?php echo BASEURL;?>assets/lib/isotope/dist/isotope.pkgd.js"></script>
     <script src="<?php echo BASEURL;?>assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="<?php echo BASEURL;?>ssets/lib/flexslider/jquery.flexslider.js"></script>
+    <script src="<?php echo BASEURL;?>assets/lib/flexslider/jquery.flexslider.js"></script>
     <script src="<?php echo BASEURL;?>assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="<?php echo BASEURL;?>assets/lib/smoothscroll.js"></script>
     <script src="<?php echo BASEURL;?>assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>

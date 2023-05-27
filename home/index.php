@@ -60,35 +60,17 @@
 
       <!-- IMAGEM BACK -->
       <div class="main">
-        <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>assets/images/portfolio/portfolio_header_bg.jpg">
+        <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>assets/images/section-4.jpg">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Portfolio Full Width</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">Estabelecimentos</h2>
               </div>
             </div>
           </div>
         </section>
-
-
-        <!-- barra de escolha FILTRO-->
-        <section class="module pb-0">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="<?php echo BASEURL;?>#" data-filter="*">Todos Comercios</a></li>
-                  <li><a class="wow fadeInUp" href="<?php echo BASEURL;?>#" data-filter=".illustration" data-wow-delay="0.2s">Restaurantes</a></li>
-                  <li><a class="wow fadeInUp" href="<?php echo BASEURL;?>#" data-filter=".marketing" data-wow-delay="0.4s">Bares</a></li>
-                  <li><a class="wow fadeInUp" href="<?php echo BASEURL;?>#" data-filter=".photography" data-wow-delay="0.6s">Sorveterias</a></li>
-                  <li><a class="wow fadeInUp" href="<?php echo BASEURL;?>#" data-filter=".webdesign" data-wow-delay="0.6s">EXEMPLOS</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
           <!-- Imagens do filtro selecionado -->
-          <ul class="works-grid works-hover-w works-grid-3" id="works-grid">
+          <ul class="works-grid works-hover-w works-grid-2" id="works-grid">
             <li class="work-item illustration webdesign"><a href="<?php echo BASEURL;?>portfolio_single_featured_image1.html">
                 <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio1.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
@@ -101,30 +83,7 @@
                   <h3 class="work-title">Bag MockUp</h3>
                   <div class="work-descr">Marketing</div>
                 </div></a></li>
-            <li class="work-item illustration photography"><a href="<?php echo BASEURL;?>portfolio_single_featured_slider1.html">
-                <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio3.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Disk Cover</h3>
-                  <div class="work-descr">Illustration</div>
-                </div></a></li>
-            <li class="work-item marketing photography"><a href="<?php echo BASEURL;?>portfolio_single_featured_slider2.htmll">
-                <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio4.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Photography</div>
-                </div></a></li>
-            <li class="work-item illustration webdesign"><a href="<?php echo BASEURL;?>portfolio_single_featured_video1.html">
-                <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio5.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Web Design</h3>
-                  <div class="work-descr">Webdesign</div>
-                </div></a></li>
-            <li class="work-item marketing webdesign"><a href="<?php echo BASEURL;?>portfolio_single_featured_video2.html">
-                <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio6.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Paper clip</h3>
-                  <div class="work-descr">Marketing</div>
-                </div></a></li>
+            
           </ul>
         </section>
         
