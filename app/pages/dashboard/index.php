@@ -114,6 +114,8 @@
               </div>
               <p class="module-subtitle font-serif align-left">Registre informações essenciais do seu item.</p>
               
+            
+
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon"><i class=" icon-document"></i></div>
@@ -135,9 +137,23 @@
                 </div>
               </div>      
               
+              <select class="form-group" id="itemSelecionado">
+                      <option value="" selected disabled>Tipo do item:</option>
+                      <option value="lanches">Lanches</option>
+                      <option value="pizzas">Pizzas</option>
+                      <option value="pratos_principais">Pratos Principais</option>
+                      <option value="sobremesas">Sobremesas</option>
+                      <option value="bebidas">Bebidas</option>
+                      <option value="entradas">Entradas</option>
+                      <option value="frutas">Frutas</option>
+
+              </select>
+
               <div class="form-group">
                 <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit"> Cadastrar novo item </button>
               </div>
+
+       
             </form>  
           </div>
         </div>
@@ -161,6 +177,7 @@
                 <div class = "row">
                   <div class="col-sm-8">
                     <select class="form-control" id="itemSelecionado">
+                      <option value = "" selected disabled>Selecionar:</option>  
                       <option value="item1">Wild Mushroom Bucatini with Kale</option>
                       <option value="item2">Outro Item do Cardápio</option>
                     </select>

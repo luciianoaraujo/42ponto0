@@ -87,7 +87,7 @@
           <div class="caption-content">
             <div class="container">
               <div class="font-alt"><b>Bem Vindo</b></div>
-              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/home"><i class="icon-play"></i> Acessar </a></div>
+              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/estabelecimentos"><i class="icon-play"></i> Acessar </a></div>
             </div>
           </div>
         </div>
