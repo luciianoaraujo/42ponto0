@@ -16,7 +16,6 @@
     -->
     <title>42ponto0</title>
 
-    
     <!--  
     Favicons
     =============================================
@@ -158,7 +157,7 @@
             <div class="row">
               <div class="col-sm-6"><img src="<?php echo BASEURL;?>assets/images/landing/why_choose.png" alt=""></div>
               <div class="col-sm-6">
-                <h2 class="module-title font-alt align-left">Por que escolher 42pont0?</h2>
+                <h2 class="module-title font-alt align-left">Por que escolher 42ponto0?</h2>
                 <p class="module-subtitle font-serif align-left">Impulsione o seu negócio com o 42pont0 - a solução perfeita para seu estabelecimento. Tenha controle total, design atrativo e aumento nas vendas. Descubra o poder da simplicidade e transforme sua experiência gastronômica.</p>
               </div>
             </div>
