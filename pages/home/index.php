@@ -13,7 +13,7 @@
     Document Title
     =============================================
     -->
-    <title>Home</title>
+    <title>Estabelecimentos</title>
     
     <!--  
     Favicons
@@ -26,9 +26,10 @@
     =============================================
     -->
     <?php include_once ABSPATH.'../includes/stylesheets.php';?>
-
-<!-- HEAD -->
   </head>
+
+  <!--BODY-->
+
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
       <div class="page-loader">
@@ -39,26 +40,10 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="<?php echo BASEURL;?>"><img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg"></a>
           </div>
-          <div class="collapse navbar-collapse" id="custom-collapse">
-            <ul class="nav navbar-nav navbar-right">
-
-              <!-- BAR OPCOES -->
-              <li class="dropdown"><a class="dropdown-toggle" href="<?php echo BASEURL;?>documentation.html" data-toggle="dropdown">Comercios</a>
-                <ul class="dropdown-menu">
-                  <li><a href="<?php echo BASEURL;?>documentation.html#contact">Contact Form</a></li>
-                  <li><a href="<?php echo BASEURL;?>documentation.html#reservation">Reservation Form</a></li>
-                  <li><a href="<?php echo BASEURL;?>documentation.html#mailchimp">Mailchimp</a></li>
-                  <li><a href="<?php echo BASEURL;?>documentation.html#gmap">Google Map</a></li>
-                  <li><a href="<?php echo BASEURL;?>documentation.html#plugin">Plugins</a></li>
-                  <li><a href="<?php echo BASEURL;?>documentation.html#changelog">Changelog</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </div>        
       </nav>
 
-      <!-- IMAGEM BACK -->
+      <!-- BACKGROUND IMAGE -->
       <div class="main">
         <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>assets/images/section-4.jpg">
           <div class="container">
@@ -69,40 +54,41 @@
             </div>
           </div>
         </section>
-          <!-- Imagens do filtro selecionado -->
-          <ul class="works-grid works-hover-w works-grid-2" id="works-grid">
-            <li class="work-item illustration webdesign"><a href="<?php echo BASEURL;?>portfolio_single_featured_image1.html">
-                <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio1.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Corporate Identity</h3>
-                  <div class="work-descr">Illustration</div>
-                </div></a></li>
-            <li class="work-item marketing photography"><a href="<?php echo BASEURL;?>portfolio_single_featured_image2.html">
-                <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio2.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Bag MockUp</h3>
-                  <div class="work-descr">Marketing</div>
-                </div></a></li>
+
+        <!-- RESTAURANTS-->
+        <ul class="works-grid works-hover-w works-grid-2" id="works-grid">
+          <li class="work-item illustration webdesign"><a href="<?php echo BASEURL;?>portfolio_single_featured_image1.html">
+            <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio1.jpg" alt="Portfolio Item"/></div>
+            <div class="work-caption font-alt">
+              <h3 class="work-title">Corporate Identity</h3>
+              <div class="work-descr">Illustration</div>
+            </div></a></li>
             
-          </ul>
-        </section>
-        
+          <li class="work-item marketing photography"><a href="<?php echo BASEURL;?>portfolio_single_featured_image2.html">
+            <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio2.jpg" alt="Portfolio Item"/></div>
+            <div class="work-caption font-alt">
+              <h3 class="work-title">Bag MockUp</h3>
+              <div class="work-descr">Marketing</div>
+            </div></a></li>
+        </ul>
+      </div>
+
+
 <!-- FOOTER -->        
-        <footer class="footer bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg">
-              </div>
-              <div class="col-sm-6">
-                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
-                </div>
-              </div>
+    <footer class="footer bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg">
+          </div>
+          <div class="col-sm-6">
+            <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
             </div>
           </div>
-        </footer>
-        <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+        </div>
       </div>
+    </footer>
+      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
 
     <!--  
