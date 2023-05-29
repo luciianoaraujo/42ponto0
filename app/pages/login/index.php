@@ -46,7 +46,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">Bem vindo</h1>
+                <h1 class="module-title font-alt mb-0">Bem vindo, Seja nosso parceiro cadastrando seu restaurante na 42ponto0 um app de cardapio online</h1>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h4 class="font-alt">Entrar ou Cadastrar</h4>
+                <h4 class="font-alt">Faça login ou cadastre seu restaurante</h4>
                 <hr class="divider-w mb-10">
                 <!-- FORM POST -->
                 <form class="form" action="" method="post">
@@ -89,7 +89,10 @@
                       <div class="panel-collapse collapse" id="support2">
                         <div class="panel-body">
                           <div class="form-group">
-                            <input class="form-control" id="nome" type="text" name="nome" placeholder="Nome" />
+                            <input class="form-control" id="nome" type="text" name="nome" placeholder="Nome do restaurante" />
+                          </div>
+                          <div class="form-group">
+                            <input class="form-control" id="nome" type="text" name="nome" placeholder="CNPJ do restaurante" />
                           </div>
                           <div class="form-group">
                             <input class="form-control" id="email" type="text" name="email" placeholder="Email" />
@@ -98,10 +101,7 @@
                             <input class="form-control" id="password" type="password" name="password" placeholder="senha" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control" id="Telefone" type="text" name="Telefone" placeholder="Telefone" />
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" id="nome_re" type="text" name="nome_re" placeholder="Nome Restaurante" />
+                            <input class="form-control" id="Telefone" type="text" name="Telefone" placeholder="telefone" />
                           </div>
                           <div class="form-group">
                             <button class="btn btn-round btn-b btn-circle" type="submit">+ Cadastrar</button>

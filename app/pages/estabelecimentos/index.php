@@ -43,35 +43,41 @@
         </div>        
       </nav>
 
-      <!-- BACKGROUND IMAGE -->
-      <div class="main">
-        <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>assets/images/section-4.jpg">
+      <!-- BACKGROUND IMAGE -->   
+      <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>assets/images/section-4.jpg">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Estabelecimentos</h2>
+                <h2 class="module-title font-alt">Bem Vindo</h2>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- RESTAURANTS-->
-        <ul class="works-grid works-hover-w works-grid-2" id="works-grid">
-          <li class="work-item illustration webdesign"><a href="<?php echo BASEURL;?>portfolio_single_featured_image1.html">
-            <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio1.jpg" alt="Portfolio Item"/></div>
-            <div class="work-caption font-alt">
-              <h3 class="work-title">Corporate Identity</h3>
-              <div class="work-descr">Illustration</div>
-            </div></a></li>
-            
-          <li class="work-item marketing photography"><a href="<?php echo BASEURL;?>portfolio_single_featured_image2.html">
-            <div class="work-image"><img src="<?php echo BASEURL;?>assets/images/portfolio/grid-portfolio2.jpg" alt="Portfolio Item"/></div>
-            <div class="work-caption font-alt">
-              <h3 class="work-title">Bag MockUp</h3>
-              <div class="work-descr">Marketing</div>
-            </div></a></li>
-        </ul>
-      </div>
+        <!-- main -->
+        <section class="module-medium" id="demos">
+          <div class="container main showcase-page">
+            <div class="row multi-columns-row">
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_mp_fullscreen_video_background.html">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/main_demo.jpg" alt="Main Demo"></div>
+                  <h3 class="content-box-title font-serif">RESTAURANTE 1</h3></a>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_agency.html">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/agency.jpg" alt="Agency"></div>
+                  <h3 class="content-box-title font-serif">RESTAURANTE 2</h3></a>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_portfolio.html">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/portfolio.jpg" alt="Portfolio"></div>
+                  <h3 class="content-box-title font-serif">RESTAURANTE 3</h3></a>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_restaurant.html">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/restaurant.jpg" alt="Restaurant"></div>
+                  <h3 class="content-box-title font-serif">RESTAURANTE 4</h3></a>
+              </div>
+              
+            </div>
+          </div>
+        </section>
 
 
 <!-- FOOTER -->        
