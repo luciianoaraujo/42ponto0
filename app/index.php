@@ -8,12 +8,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!--  
-    Document Title
-    =============================================
-    -->
     <title>42ponto0</title>
 
     <!--  
@@ -33,20 +27,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo BASEURL;?>assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo BASEURL;?>assets/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo BASEURL;?>assets/images/favicons/favicon-16x16.png">
-    <!-- VER OQUE FAZ -->
-                        <link rel="manifest" href="/manifest.json">
-                        <meta name="msapplication-TileColor" content="#ffffff">
-                        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
-                        <meta name="theme-color" content="#ffffff"> 
-
     
-    <!--  
-    Stylesheets
-    =============================================
-    -->
-    <!-- Default stylesheets-->
+    
     <link href="<?php echo BASEURL;?>assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template specific stylesheets-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
@@ -58,7 +41,6 @@
     <link href="<?php echo BASEURL;?>assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="<?php echo BASEURL;?>assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
     <link href="<?php echo BASEURL;?>assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
-    <!-- Main stylesheet and color file-->
     <link href="<?php echo BASEURL;?>assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="<?php echo BASEURL;?>assets/css/colors/default.css" rel="stylesheet">
 
@@ -147,7 +129,6 @@
                   <h3 class="alt-features-title font-alt">Loja</h3>
                   <p>Explore nossa loja virtual e adquira produtos relacionados ao seu restaurante diretamente pelo nosso aplicativo.</p>
                 </div>
-
               </div>
             </div>
           </div>

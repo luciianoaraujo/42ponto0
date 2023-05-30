@@ -46,7 +46,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">Bem vindo, Seja nosso parceiro cadastrando seu restaurante na 42ponto0 um app de cardapio online</h1>
+                <h1 class="module-title font-alt mb-0"></h1>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h4 class="font-alt">Faça login ou cadastre seu restaurante</h4>
+                <h1 class="module-title font-alt mb-0">Entre ou Cadastre seu Estabelecimento</h1>
                 <hr class="divider-w mb-10">
                 <!-- FORM POST -->
                 <form class="form" action="" method="post">
