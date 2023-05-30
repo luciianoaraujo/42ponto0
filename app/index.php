@@ -14,36 +14,19 @@
     Favicons
     =============================================
     -->
-    <link rel="apple-touch-icon" sizes="57x57" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo BASEURL;?>assets/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo BASEURL;?>assets/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo BASEURL;?>assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?php echo BASEURL;?>assets/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo BASEURL;?>assets/images/favicons/favicon-16x16.png">
+    <?php 
     
-    
-    <link href="<?php echo BASEURL;?>assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/animate.css/animate.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
-    <link href="<?php echo BASEURL;?>assets/css/style.css" rel="stylesheet">
-    <link id="color-scheme" href="<?php echo BASEURL;?>assets/css/colors/default.css" rel="stylesheet">
+      include 'includes/favicons.php';
 
+    ?>
+    
+    <!-- Stylesheets -->
+    <?php
+      include 'includes/stylesheets.php';
+   ?>
+
+  </head>
+  <body>
     
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -54,29 +37,29 @@
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="<?php echo BASEURL;?>"><img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg"></a>
+            <a class="navbar-brand" href="<?php echo BASEURL;?>"><img class="logo-img" src="<?php echo BASEURL;?>public/images/logo.svg"></a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/login/"> <i class="icon-play"></i> + Seja parceiro </a>
-              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/login/"> <i class="icon-play"></i> > Login </a>
+              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>views/login/"> <i class="icon-play"></i> + Seja parceiro </a>
+              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>views/login/"> <i class="icon-play"></i> > Login </a>
             </ul>
           </div>
         </div>
       </nav>
-      <section class="home-section home-fade home-full-height bg-dark-60 landing-header" id="home" data-background="<?php echo BASEURL;?>assets/images/landing/landing_bg.jpg">
+      <section class="home-section home-fade home-full-height bg-dark-60 landing-header" id="home" data-background="<?php echo BASEURL;?>public/images/landing/landing_bg.jpg">
         <div class="titan-caption">
           <div class="caption-content">
             <div class="container">
               <div class="font-alt"><b>Bem Vindo</b></div>
-              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/estabelecimentos"><i class="icon-play"></i> Restaurantes </a></div>
+              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>views/estabelecimentos"><i class="icon-play"></i> Restaurantes </a></div>
             </div>
           </div>
         </div>
       </section>
       <div class="container">
         <div class="row">
-          <div class="col-md-12 col-md-offset"><img class="img-responsive banner-img" src="assets/images/landing/banner_img.png"></div>
+          <div class="col-md-12 col-md-offset"><img class="img-responsive banner-img" src="public/images/landing/banner_img.png"></div>
         </div>
       </div>
       <div class="main">
@@ -106,7 +89,7 @@
                     </div>
                 </div>
               <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
-                <div class="alt-services-image align-center"><img src="<?php echo BASEURL;?>assets/images/landing/feature.png" alt="Imagem do recurso"></div>
+                <div class="alt-services-image align-center"><img src="<?php echo BASEURL;?>public/images/landing/feature.png" alt="Imagem do recurso"></div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="alt-features-item">
@@ -133,10 +116,10 @@
             </div>
           </div>
         </section>
-        <section class="module pb-0 bg-dark landing-reason parallax-bg" data-background="<?php echo BASEURL;?>assets/images/landing/why_choose_bg.png">
+        <section class="module pb-0 bg-dark landing-reason parallax-bg" data-background="<?php echo BASEURL;?>public/images/landing/why_choose_bg.png">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6"><img src="<?php echo BASEURL;?>assets/images/landing/why_choose.png" alt=""></div>
+              <div class="col-sm-6"><img src="<?php echo BASEURL;?>public/images/landing/why_choose.png" alt=""></div>
               <div class="col-sm-6">
                 <h2 class="module-title font-alt align-left">Por que escolher 42ponto0?</h2>
                 <p class="module-subtitle font-serif align-left">Impulsione o seu negócio com o 42pont0 - a solução perfeita para seu estabelecimento. Tenha controle total, design atrativo e aumento nas vendas. Descubra o poder da simplicidade e transforme sua experiência gastronômica.</p>
@@ -147,7 +130,7 @@
         <section>
           <div class="container">
             <div class="row landing-image-text">
-              <div class="col-sm-6"><img class="center-block" src="<?php echo BASEURL;?>assets/images/landing/iphone-mockup.png" alt=""></div>
+              <div class="col-sm-6"><img class="center-block" src="<?php echo BASEURL;?>public/images/landing/iphone-mockup.png" alt=""></div>
                 <div class="col-sm-6">
                   <h2 class="font-alt">Como funciona?</h2>
                   <p class="font-serif">No 42ponto0 você conta com diversas vantagens para seu negócio.</p>
@@ -162,7 +145,7 @@
             </div>
           </div>
         </section>
-        <section class="module bg-dark parallax-bg landing-screenshot" data-background="<?php echo BASEURL;?>assets/images/landing/screenshot_bg.png">
+        <section class="module bg-dark parallax-bg landing-screenshot" data-background="<?php echo BASEURL;?>public/images/landing/screenshot_bg.png">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
@@ -173,22 +156,22 @@
             <div class="row client">
               <div class="owl-carousel text-center" data-items="4" data-pagination="true" data-navigation="false">
                 <div class="owl-item">
-                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>assets/images/landing/screens/Mockup2.png" alt="App Screenshot"></div>
+                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>public/images/landing/screens/Mockup2.png" alt="App Screenshot"></div>
                 </div>
                 <div class="owl-item">
-                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>assets/images/landing/screens/Mockup6.png" alt="App Screenshot"></div>
+                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>public/images/landing/screens/Mockup6.png" alt="App Screenshot"></div>
                 </div>
                 <div class="owl-item">
-                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>assets/images/landing/screens/Mockup1.png" alt="App Screenshot"></div>
+                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>public/images/landing/screens/Mockup1.png" alt="App Screenshot"></div>
                 </div>
                 <div class="owl-item">
-                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>assets/images/landing/screens/Mockup3.png" alt="App Screenshot"></div>
+                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>public/images/landing/screens/Mockup3.png" alt="App Screenshot"></div>
                 </div>
                 <div class="owl-item">
-                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>assets/images/landing/screens/Mockup5.png" alt="App Screenshot"></div>
+                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>public/images/landing/screens/Mockup5.png" alt="App Screenshot"></div>
                 </div>
                 <div class="owl-item">
-                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>assets/images/landing/screens/Mockup4.png" alt="App Screenshot"></div>
+                  <div class="col-sm-12"><img src="<?php echo BASEURL;?>public/images/landing/screens/Mockup4.png" alt="App Screenshot"></div>
                 </div>
               </div>
             </div>
@@ -196,41 +179,17 @@
         </section>
 
 <!-- FOOTER -->
-        <footer class="footer bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg">
-              </div>
-              <div class="col-sm-6">
-                <div class="footer-social-links"><a href="<?php echo BASEURL;?>#"><i class="fa fa-facebook"></i></a><a href="<?php echo BASEURL;?>#"><i class="fa fa-twitter"></i></a><a href="<?php echo BASEURL;?>#"><i class="fa fa-dribbble"></i></a><a href="<?php echo BASEURL;?>#"><i class="fa fa-skype"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
-    </main>
 
+<?php
+    include 'includes/footer.php';
+?>
 
     <!--  
     JavaScripts
     =============================================
     -->
-    <script src="<?php echo BASEURL;?>assets/lib/jquery/dist/jquery.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/wow/dist/wow.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/isotope/dist/isotope.pkgd.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/flexslider/jquery.flexslider.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/smoothscroll.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script src="<?php echo BASEURL;?>assets/js/plugins.js"></script>
-    <script src="<?php echo BASEURL;?>assets/js/main.js"></script>
-   
+<?php
+  include 'includes/animations.php';
+?>
   </body>
   </html>

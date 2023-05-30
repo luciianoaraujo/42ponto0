@@ -30,20 +30,9 @@
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="<?php echo BASEURL;?>"><img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg"></a>
-          </div>
-        </div>
-      </nav>
-
-
-
+      <?php
+        include '../../includes/header.php'
+      ?>
 
       <!-- EDITAR OPÇOES DO RESTAURANTE -->
       <section class="module" id="menu">
@@ -57,7 +46,7 @@
             <form class="reservation-form" method="post">
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="shop-item">
-                  <div class="shop-item-image"><img src="<?php echo BASEURL;?>assets/images/shop/product-7.jpg" alt="Accessories Pack"/>
+                  <div class="shop-item-image"><img src="<?php echo BASEURL;?>public/images/shop/product-7.jpg" alt="Accessories Pack"/>
                     <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class=" icon-camera"> Adicionar imagem</span></a></div>
                   </div>
                 </div>
@@ -105,18 +94,12 @@
             </div>
             
             <form class="reservation-form" method="post">
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="<?php echo BASEURL;?>assets/images/shop/product-7.jpg" alt="Accessories Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class=" icon-camera"> Adicionar imagem</span></a></div>
-                  </div>
-                </div>
-              </div>
-              <p class="module-subtitle font-serif align-left">Registre informações essenciais do seu item.</p>
-              
-            
+
+              <p class="module-subtitle font-serif align-center">Registre informações essenciais do seu item.</p>
 
               <div class="form-group">
+     
+      
                 <div class="input-group">
                   <div class="input-group-addon"><i class=" icon-document"></i></div>
                   <input class="form-control input-lg" type="text" id="nomeItem" name="nomeItem" placeholder="Novo Item*" required="required"/>
@@ -137,7 +120,7 @@
                 </div>
               </div>      
               
-              <select class="form-group" id="itemSelecionado">
+              <select class="form-control" id="tipoSelecionado">
                       <option value="" selected disabled>Tipo do item:</option>
                       <option value="lanches">Lanches</option>
                       <option value="pizzas">Pizzas</option>
@@ -212,39 +195,16 @@
 
 
     <!-- FOOTER -->
-      
-      <footer class="footer bg-dark">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <img class="logo-img" src="<?php echo BASEURL;?>assets/images/logo.svg">
-            </div>
-            <div class="col-sm-6">
-              <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
-  
-    </main>
-    <!--  
-    JavaScripts
-    =============================================
-    -->
-    <script src="<?php echo BASEURL;?>assets/lib/jquery/dist/jquery.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/wow/dist/wow.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/isotope/dist/isotope.pkgd.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/flexslider/jquery.flexslider.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="<?php echo BASEURL;?>ssets/lib/smoothscroll.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="<?php echo BASEURL;?>assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script src="<?php echo BASEURL;?>assets/js/plugins.js"></script>
-    <script src="<?php echo BASEURL;?>assets/js/main.js"></script>
+    <?php
+        include '../../includes/footer.php';
+    ?>
+
+        <!--  
+        JavaScripts
+        =============================================
+        -->
+    <?php
+      include '../../includes/animations.php';
+    ?>
   </body>
 </html>
