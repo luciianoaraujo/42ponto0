@@ -58,21 +58,29 @@
         <section class="module-medium" id="demos">
           <div class="container main showcase-page">
             <div class="row multi-columns-row">
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_mp_fullscreen_video_background.html">
-                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/main_demo.jpg" alt="Main Demo"></div>
-                  <h3 class="content-box-title font-serif">RESTAURANTE 1</h3></a>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="cardapio.php">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/logos/1.png" alt="Main Demo"></div>
+                  <h3 class="content-box-title font-serif">Mc Donald</h3></a>
               </div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_agency.html">
-                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/agency.jpg" alt="Agency"></div>
-                  <h3 class="content-box-title font-serif">RESTAURANTE 2</h3></a>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="cardapio.php">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/logos/2.png" alt="Agency"></div>
+                  <h3 class="content-box-title font-serif">OutBack</h3></a>
               </div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_portfolio.html">
-                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/portfolio.jpg" alt="Portfolio"></div>
-                  <h3 class="content-box-title font-serif">RESTAURANTE 3</h3></a>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="cardapio.php">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/logos/3.png" alt="Portfolio"></div>
+                  <h3 class="content-box-title font-serif">Burguer King</h3></a>
               </div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_restaurant.html">
-                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/screenshots/restaurant.jpg" alt="Restaurant"></div>
-                  <h3 class="content-box-title font-serif">RESTAURANTE 4</h3></a>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="cardapio.php">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/logos/4.png" alt="Restaurant"></div>
+                  <h3 class="content-box-title font-serif">Starbucks</h3></a>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="cardapio.php">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/logos/5.png" alt="Portfolio"></div>
+                  <h3 class="content-box-title font-serif">Subway</h3></a>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="cardapio.php">
+                  <div class="content-box-image"><img src="<?php echo BASEURL;?>assets/images/logos/6.png" alt="Restaurant"></div>
+                  <h3 class="content-box-title font-serif">Pizza Hut</h3></a>
               </div>
               
             </div>
