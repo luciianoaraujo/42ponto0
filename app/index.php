@@ -48,8 +48,8 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>views/login/"> <i class="icon-play"></i> + Seja parceiro </a>
-              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>views/login/"> <i class="icon-play"></i> > Login </a>
+              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/login/"> <i class="icon-play"></i> + Seja parceiro </a>
+              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/login/"> <i class="icon-play"></i> > Login </a>
             </ul>
           </div>
         </div>
@@ -59,7 +59,7 @@
           <div class="caption-content">
             <div class="container">
               <div class="font-alt"><b>Bem Vindo</b></div>
-              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>views/estabelecimentos"><i class="icon-play"></i> Restaurantes </a></div>
+              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL;?>pages/estabelecimentos"><i class="icon-play"></i> Restaurantes </a></div>
             </div>
           </div>
         </div>

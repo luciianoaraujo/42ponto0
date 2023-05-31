@@ -1,10 +1,13 @@
 <?php
 
+use Controllers\CardapioController;
 use Controllers\EstabelecimentosController;
+use Controllers\LoginController;
 
 $routes = [
-    '/42ponto0/app/views/estabelecimentos' => [EstabelecimentosController::class, 'listarEstabelecimentos'],
-    '/estabelecimentos/cardapio' => [CardapioController::class, 'exibirCardapio'],
+    '/42ponto0/app/pages/estabelecimentos' => [EstabelecimentosController::class, 'listarEstabelecimentos'],
+    '/42ponto0/app/pages/estabelecimentos/cardapio/' => [CardapioController::class, 'index'],
+    '/42ponto0/app/pages/login' => [LoginController::class, 'showLoginForm']
 ];
 
 function handleRoute($url)

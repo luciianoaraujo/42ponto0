@@ -1,9 +1,3 @@
-<?php 
-  require_once '../../includes/config.php'; 
-  require_once '../../../vendor/autoload.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -20,12 +14,7 @@
         include '../../includes/header.php';
       ?>
 
-      <?php
-        require_once '../../config/routes.php';     
-        $url = $_SERVER['REQUEST_URI'];
-        handleRoute($url);    
-        
-      ?>
+
 
       <!-- BACKGROUND IMAGE -->   
       <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>public/images/section-4.jpg">
@@ -41,11 +30,12 @@
 
         <!-- main -->
         <section class="module-medium" id="demos">
+
           <div class="container main showcase-page">
             <div class="row multi-columns-row">
-            <?php var_dump($estabelecimentos); foreach ($estabelecimentos as $estabelecimento) : ?>
+            <?php foreach ($estabelecimentos as $estabelecimento) : ?>
               <div class="col-md-4 col-sm-6 col-xs-12">
-                  <a class="content-box" href="cardapio.php?id=<?php echo $estabelecimento['pk_id_register']; ?>">
+                  <a class="content-box" href="cardapio/?id=<?php echo $estabelecimento['pk_id_register']; ?>">
                       <div class="content-box-image">
                           <img src="<?php echo $estabelecimento['image_info']; ?>" alt="Logo do estabelecimento">
                       </div>
@@ -56,6 +46,7 @@
             </div>
           </div>
         </section>
+
  
     <!-- FOOTER -->
     <?php

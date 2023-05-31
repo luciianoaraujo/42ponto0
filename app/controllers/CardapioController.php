@@ -1,7 +1,7 @@
 <?php
 
-namespace app\controllers;
-use app\models\CardapioModel;
+namespace Controllers;
+use Models\CardapioModel;
 use PDO;
 
 class CardapioController
@@ -12,7 +12,15 @@ class CardapioController
 
         $cardapioModel = new CardapioModel();
         $cardapio = $cardapioModel->getCardapioByEstabelecimento($estabelecimentoId);
+        $data = [
+            'cardapio' => $cardapio,
+        ];
+        $this->render('../../../views/estabelecimentos/cardapio.php', $data);
 
-        include_once 'views/estabelecimento/cardapio.php';
+    }
+    private function render($view, $data)
+    {
+        extract($data); // Extract the variables from the data array
+        include_once $view;  // Include the view file
     }
 }
