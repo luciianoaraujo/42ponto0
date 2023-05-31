@@ -1,26 +1,29 @@
 <?php
 
-use app\controllers\EstabelecimentosController;
-use app\controllers\CardapioController;
+use Controllers\EstabelecimentosController;
 
 $routes = [
-    '/' => [EstabelecimentosController::class, 'index'],
-    '/estabelecimentos' => [EstabelecimentosController::class, 'index'],
-    '/estabelecimentos/cardapio' => [EstabelecimentosController::class, 'cardapio'],
-    '/login' => [LoginController::class, 'index'],
+    '/42ponto0/app/views/estabelecimentos' => [EstabelecimentosController::class, 'listarEstabelecimentos'],
+    '/estabelecimentos/cardapio' => [CardapioController::class, 'exibirCardapio'],
 ];
 
 function handleRoute($url)
 {
     global $routes;
 
-    if (array_key_exists($url, $routes)) {
-        $controller = new $routes[$url][0]();
-        $method = $routes[$url][1];
+
+    $url = rtrim($url, '/');
+    $path = parse_url($url, PHP_URL_PATH);
+
+
+    if (array_key_exists($path, $routes)) {
+        $controllerClass = $routes[$path][0];
+        $method = $routes[$path][1];
+        $controller = new $controllerClass;
         $controller->$method();
+
     } else {
         echo "404 - Rota não encontrada";
     }
 }
 
-?>

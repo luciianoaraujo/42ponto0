@@ -1,5 +1,9 @@
 <?php
 
+namespace app\controllers;
+use app\models\CardapioModel;
+use PDO;
+
 class CardapioController
 {
     public function index()

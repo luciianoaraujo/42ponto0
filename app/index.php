@@ -2,6 +2,10 @@
   require_once 'includes/config.php';
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -23,9 +27,12 @@
     <!-- Stylesheets -->
     <?php
       include 'includes/stylesheets.php';
-   ?>
-
+     ?>
+     
   </head>
+
+
+
   <body>
     
   </head>
