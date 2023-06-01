@@ -1,13 +1,18 @@
 <?php
 
 use Controllers\CardapioController;
+use Controllers\DashboardController;
 use Controllers\EstabelecimentosController;
 use Controllers\LoginController;
+use Controllers\RegisterController;
 
 $routes = [
     '/42ponto0/app/pages/estabelecimentos' => [EstabelecimentosController::class, 'listarEstabelecimentos'],
-    '/42ponto0/app/pages/estabelecimentos/cardapio/' => [CardapioController::class, 'index'],
-    '/42ponto0/app/pages/login' => [LoginController::class, 'showLoginForm']
+    '/42ponto0/app/pages/estabelecimentos/cardapio/' => [CardapioController::class, 'showCardapio'],
+    '/42ponto0/app/pages/login' => [LoginController::class, 'handleLoginForm'],
+    '/42ponto0/app/pages/register' => [RegisterController::class, 'handleRegisterForm'],
+    '/42ponto0/app/pages/dashboard/' => [DashboardController::class, 'showDashboard'],
+    
 ];
 
 function handleRoute($url)

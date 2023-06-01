@@ -33,4 +33,10 @@ class EstabelecimentosModel
             return [];
         }
     }
+
+    
+
+
+
+
 }               

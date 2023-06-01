@@ -6,7 +6,7 @@ use PDO;
 
 class CardapioController
 {
-    public function index()
+    public function showCardapio()
     {
         $estabelecimentoId = $_GET['id'];
 

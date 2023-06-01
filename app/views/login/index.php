@@ -29,8 +29,9 @@
       <?php
         include '../../includes/header.php'
       ?>
+      <!-- MAIN -->
       <div class="main">
-        <section class="module bg-dark-30" data-background="<?php echo BASEURL;?>public/images/section-4.jpg">
+        <section class="module bg-dark-30" data-background="<?php echo BASEURL;?>public/images/logos/estabel_gif.gif">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
@@ -39,66 +40,41 @@
             </div>
           </div>
         </section>
-<!-- MAIN -->
         <section class="module">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">Entre ou Cadastre seu Estabelecimento</h1>
+                <h1 class="module-title font-alt mb-0">Login</h1>
                 <hr class="divider-w mb-10">
                 <!-- FORM POST -->
-                <form class="form" action="" method="post">
-                  <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                      <!-- LOGIN -->
-                      <div class="panel-heading">
-                        <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1"> > Login </a></h4>
-                      </div>
-                      <div class="panel-collapse collapse in" id="support1">
-                        <div class="panel-body">
-                          <div class="form-group">
-                            <input class="form-control" id="email" type="text" name="email" placeholder="Email" />
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" id="password" type="password" name="password" placeholder="senha" />
-                          </div>
-                          <div class="form-group">
-                            <button class="btn btn-round btn-b btn-circle" type="submit"> > Login </button>
+              <form class="form" method="post">
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <!-- LOGIN -->
+                    <div class="panel-heading">
+                      <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Login</a></h4>
+                    </div>
+                    <div class="panel-collapse collapse in" id="support1">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <input class="form-control" id="login-email" type="text" name="login-email" placeholder="Email" />
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" id="login-password" type="password" name="login-password" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-round btn-b btn-circle" type="submit">Login</button>
+                          <div class="error-message-container">
+                              <?php if ($error): ?>
+                                  <div class="error-message"><?php echo $error; ?></div>
+                              <?php endif; ?>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <hr class="divider-w mt-10 mb-10">
-                    <div class="panel panel-default">
-                      <!-- REGISTER -->
-                      <div class="panel-heading">
-                        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2"> + Cadastrar </a></h4>
-                      </div>
-                      <div class="panel-collapse collapse" id="support2">
-                        <div class="panel-body">
-                          <div class="form-group">
-                            <input class="form-control" id="nome" type="text" name="nome" placeholder="Nome do restaurante" />
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" id="nome" type="text" name="nome" placeholder="CNPJ do restaurante" />
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" id="email" type="text" name="email" placeholder="Email" />
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" id="password" type="password" name="password" placeholder="senha" />
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" id="Telefone" type="text" name="Telefone" placeholder="telefone" />
-                          </div>
-                          <div class="form-group">
-                            <button class="btn btn-round btn-b btn-circle" type="submit">+ Cadastrar</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>    
-                </form>
+                  </div>
+              </form>
+
                 
               </div>
             </div>

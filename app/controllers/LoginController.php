@@ -2,47 +2,47 @@
 
 namespace Controllers;
 
-use Models\UserModel;
+use Models\LoginModel;
 
 class LoginController
 {
-    public function showLoginForm()
+
+    public function handleLoginForm(){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->login();
+        } else {
+            $this->showLoginForm();
+        }
+    }
+
+    public function showLoginForm($error = null)
     {
-        $data = [];
+        $data = ['error' => $error];
+
         $this->render('../../views/login/index.php', $data);
     }
 
     public function login()
     {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+            $email = $_POST['login-email'];
+            $password = $_POST['login-password'];
 
-
-        $userModel = new UserModel;
-        $user = $userModel->getUserByEmail($email);
-
-        if ($user && password_verify($password, $user['password'])) {
-            session_start();
-            $_SESSION['user'] = $user; 
-            header('Location: /dashboard.php'); 
-        } else {
-            header('Location: /login.php?error=1');
-        }
+            $loginModel = new LoginModel;
+            $user = $loginModel->validateLogin($email, $password);
+            
+            if ($user) {
+                session_start();
+                $_SESSION['user'] = $user;
+                $estabelecimentoId = $user['pk_id_register']; // Obtenha o ID do estabelecimento do usuário
+                header("Location: /42ponto0/app/pages/dashboard/?id=$estabelecimentoId");
+                exit;
+            } else {
+               $error = 'Credenciais inválidas. Por favor, tente novamente.';
+               $this->showLoginForm($error);
+            }    
     }
 
-    public function register()
-    {
-        $nome = $_POST['nome'];
-        $cnpj = $_POST['cnpj'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $telefone = $_POST['telefone'];
 
-        $userModel = new UserModel;
-        $userModel->createUser($nome, $cnpj, $email, $password, $telefone);
-
-        header('Location: /login.php');
-    }
 
     private function render($view, $data)
     {

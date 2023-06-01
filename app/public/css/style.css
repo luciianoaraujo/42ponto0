@@ -2925,3 +2925,17 @@ Google map
     width: 100%;
   }
 }
+
+.error-message-container {
+  margin-bottom: 10px; /* Espaçamento inferior para separar a mensagem de erro do formulário */
+}
+
+.error-message {
+  background-color: #ffdddd; /* Cor de fundo da mensagem de erro */
+  color: #ff0000; /* Cor do texto da mensagem de erro */
+  padding: 10px; /* Espaçamento interno da mensagem de erro */
+  border: 1px solid #ff0000; /* Borda da mensagem de erro */
+  border-radius: 4px; /* Arredondamento da borda da mensagem de erro */
+  margin-top: 10px;
+  
+}

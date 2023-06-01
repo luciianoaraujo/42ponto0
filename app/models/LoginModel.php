@@ -6,7 +6,7 @@ use App\config\Database;
 use PDO;
 use PDOException;
 
-class UserModel
+class LoginModel
 {
     private $conn;
 
@@ -16,41 +16,29 @@ class UserModel
         $this->conn = $database->getConnection();
     }
 
-    public function getUserByEmail($email)
+    public function validateLogin($email, $password)
     {
         try {
-            $query = "SELECT * FROM users WHERE email = :email LIMIT 1";
+            $query = "SELECT * FROM tb_register_restaurant WHERE email_register = :email LIMIT 1";
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(':email', $email);
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            return $user ? $user : null;
+            if ($user && password_verify($password, $user['password_register'])) {
+                return $user;
+
+                
+
+            } else {
+                return null;
+            }
         } catch (PDOException $e) {
-            echo "Erro ao buscar usuário: " . $e->getMessage();
+            echo "Erro ao validar o login: " . $e->getMessage();
             return null;
         }
-    }
 
-    public function createUser($nome, $cnpj, $email, $password, $telefone)
-    {
-        try {
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            $query = "INSERT INTO users (nome, cnpj, email, password, telefone) VALUES (:nome, :cnpj, :email, :password, :telefone)";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(':nome', $nome);
-            $stmt->bindParam(':cnpj', $cnpj);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $hashedPassword);
-            $stmt->bindParam(':telefone', $telefone);
-            $stmt->execute();
-
-            return $this->conn->lastInsertId();
-        } catch (PDOException $e) {
-            echo "Erro ao criar usuário: " . $e->getMessage();
-            return null;
-        }
     }
 
 }

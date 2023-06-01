@@ -17,11 +17,11 @@
 
 
       <!-- BACKGROUND IMAGE -->   
-      <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>public/images/section-4.jpg">
+      <section class="module bg-dark-60 portfolio-page-header" data-background="<?php echo BASEURL;?>public/images/logos/estabel_gif.gif">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Bem Vindo</h2>
+                <h2  class="module-title font-alt"></h2>
                 
               </div>
             </div>
@@ -30,7 +30,6 @@
 
         <!-- main -->
         <section class="module-medium" id="demos">
-
           <div class="container main showcase-page">
             <div class="row multi-columns-row">
             <?php foreach ($estabelecimentos as $estabelecimento) : ?>

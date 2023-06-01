@@ -1,4 +1,4 @@
-    <div class="page-loader">
+<div class="page-loader">
         <div class="loader">Loading...</div>
     </div>
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -8,3 +8,4 @@
           </div>
         </div>
     </nav>
+
