@@ -7,6 +7,7 @@ use Models\LoginModel;
 class LoginController
 {
 
+
     public function handleLoginForm(){
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->login();
@@ -17,7 +18,8 @@ class LoginController
 
     public function showLoginForm($error = null)
     {
-        $data = ['error' => $error];
+        $data = ['error' => $error,
+                '0'];
 
         $this->render('../../views/login/index.php', $data);
     }
@@ -31,10 +33,8 @@ class LoginController
             $user = $loginModel->validateLogin($email, $password);
             
             if ($user) {
-                session_start();
                 $_SESSION['user'] = $user;
-                $estabelecimentoId = $user['pk_id_register']; // Obtenha o ID do estabelecimento do usuário
-                header("Location: /42ponto0/app/pages/dashboard/?id=$estabelecimentoId");
+                header("Location: /42ponto0/app/pages/dashboard");
                 exit;
             } else {
                $error = 'Credenciais inválidas. Por favor, tente novamente.';
@@ -49,4 +49,5 @@ class LoginController
         extract($data); // Extract the variables from the data array
         include_once $view;  // Include the view file
     }
+    
 }

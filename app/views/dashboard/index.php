@@ -1,5 +1,5 @@
 <?php 
-  require_once '../../includes/config.php'; 
+require_once '../../includes/config.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +30,34 @@
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
-      <?php
-        include '../../includes/header.php'
-      ?>
+    <main>
+      <div class="page-loader">
+          <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="<?php echo BASEURL;?>"><img class="logo-img" src="<?php echo BASEURL;?>public/images/logo.svg"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="custom-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <?php
+                  if(isset($_SESSION['user'])){
+                    ?>
+                      <form method="post" action="../../pages/logout/">
+                          <button class="btn btn-border-w mt-5 btn-circle" type="submit" name="logout">
+                              <i class="icon-play"></i> Logout
+                          </button>
+                      </form>
+                    <?php
+                  }
+                  
+                ?>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
 
       <!-- EDITAR OPÇOES DO RESTAURANTE -->
       <section class="module" id="menu">

@@ -5,19 +5,26 @@ use Controllers\DashboardController;
 use Controllers\EstabelecimentosController;
 use Controllers\LoginController;
 use Controllers\RegisterController;
+use Controllers\LogoutController;
+
 
 $routes = [
+    '/42ponto0/app/pages/logout'=>[LogoutController::class, 'logout'],
     '/42ponto0/app/pages/estabelecimentos' => [EstabelecimentosController::class, 'listarEstabelecimentos'],
     '/42ponto0/app/pages/estabelecimentos/cardapio/' => [CardapioController::class, 'showCardapio'],
     '/42ponto0/app/pages/login' => [LoginController::class, 'handleLoginForm'],
     '/42ponto0/app/pages/register' => [RegisterController::class, 'handleRegisterForm'],
-    '/42ponto0/app/pages/dashboard/' => [DashboardController::class, 'showDashboard'],
+    '/42ponto0/app/pages/dashboard' => [DashboardController::class, 'showDashboard']
     
 ];
 
 function handleRoute($url)
 {
     global $routes;
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
 
 
     $url = rtrim($url, '/');

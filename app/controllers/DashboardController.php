@@ -9,10 +9,13 @@ class DashboardController
 
     public function showDashboard()
     {
-
-        $estabelecimentoId = $_GET['id'];
-        $dashboardModel = new DashboardModel();
-        $dashboard = $dashboardModel->getDashboardByEstabelecimento($estabelecimentoId);
+        if(!isset($_SESSION['user']['pk_id_register'])){
+            header("Location: ../../pages/login");
+        }
+        
+        //$estabelecimentoId = $_SESSION['user']['pk_id_register'];
+        //$dashboardModel = new DashboardModel();
+        //$dashboard = $dashboardModel->getDashboardByEstabelecimento($estabelecimentoId);
 
         $data = [];
         $this->render('../../views/dashboard/index.php', $data);

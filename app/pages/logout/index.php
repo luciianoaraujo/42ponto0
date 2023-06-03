@@ -4,5 +4,4 @@
   require_once '../../config/routes.php';     
   $url = $_SERVER['REQUEST_URI'];
   handleRoute($url);
-  
 ?>

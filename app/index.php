@@ -48,12 +48,6 @@ require_once 'includes/config.php';
           <div class="navbar-header">
             <a class="navbar-brand" href="<?php echo BASEURL; ?>"><img class="logo-img" src="<?php echo BASEURL; ?>public/images/logo.svg"></a>
           </div>
-          <div class="collapse navbar-collapse" id="custom-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL; ?>pages/register/"> <i class="icon-play"></i> + Seja parceiro </a>
-              <a class="btn btn-border-w btn-circle" href="<?php echo BASEURL; ?>pages/login/"> <i class="icon-play"></i> > Login </a>
-            </ul>
-          </div>
         </div>
       </nav>
       <section class="home-section home-fade home-full-height bg-dark-60 landing-header" id="home" data-background="<?php echo BASEURL; ?>public/images/landing/landing_bg.jpg">
@@ -66,11 +60,7 @@ require_once 'includes/config.php';
           </div>
         </div>
       </section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-md-offset"><img class="img-responsive banner-img" src="public/images/landing/banner_img.png"></div>
-        </div>
-      </div>
+
       <div class="main">
         <section class="module" id="alt-features">
           <div class="container">
