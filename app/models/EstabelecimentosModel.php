@@ -19,9 +19,8 @@ class EstabelecimentosModel
     public function getAllEstabelecimentos()
     {
         try {
-            $query = "SELECT name_register, image_info, pk_id_register
-                      FROM TB_REGISTER_RESTAURANT
-                      LEFT JOIN TB_INFO_RESTAURANT ON TB_REGISTER_RESTAURANT.pk_id_register = TB_INFO_RESTAURANT.fk_id_register_info";
+            $query = "SELECT name_register, image, pk_id_register FROM TB_REGISTER_RESTAURANT";
+                      
 
             $stmt = $this->conn->prepare($query);
             $stmt->execute();

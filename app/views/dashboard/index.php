@@ -58,56 +58,6 @@ require_once '../../includes/config.php';
           </div>
         </nav>
 
-
-      <!-- EDITAR OPÇOES DO RESTAURANTE -->
-      <section class="module" id="menu">
-        <div class="container">
-          <div class="row multi-columns-row">
-            <div class="row">
-              <div class="col-sm-12">
-                <h2 class="module-title font-alt ">Informaçoes do restaurante</h2>
-              </div>
-            </div>
-            <form class="reservation-form" method="post">
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="<?php echo BASEURL;?>public/images/shop/product-7.jpg" alt="Accessories Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class=" icon-camera"> Adicionar imagem</span></a></div>
-                  </div>
-                </div>
-              </div>
-              <p class="module-subtitle font-serif align-left">Registre informações essenciais do seu restaurante.</p>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-clock"></i></div>
-                  <select class="form-control input-lg" id="time" name="time" type="text" required="required">
-                    <option value="time" disabled="" selected=""> Aberto | Fechado </option>
-                    <option value="aberto">ABERTO</option>
-                    <option value="fechado">FECHADO</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-profile-male"></i></div>
-                  <input class="form-control input-lg" type="text" id="tell" name="tell" placeholder="Telefone para contato do Estabelecimento*" required="required"/>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-documents"></i></div>
-                  <input class="form-control input-lg" type="text" id="sobre" name="sobre" placeholder="Sobre o Restaurante*"/>
-                </div>
-              </div>             
-              <div class="form-group">
-                <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit">Salvar</button>
-              </div>  
-              <div id="reservationFormResponse"></div>
-            </form>  
-          </div>
-        </div>
-      </section>
-
       <!-- CADASTRO DE ITEM -->
       <section class="module" id="menu">
         <div class="container">
@@ -118,7 +68,8 @@ require_once '../../includes/config.php';
               </div>
             </div>
             
-            <form class="reservation-form" method="post">
+            <form class="reservation-form" method="post" action = '../../pages/dashboard/formCadastra.php'>
+      
 
               <p class="module-subtitle font-serif align-center">Registre informações essenciais do seu item.</p>
 
@@ -145,7 +96,7 @@ require_once '../../includes/config.php';
                 </div>
               </div>      
               
-              <select class="form-control" id="tipoSelecionado">
+              <select class="form-control" name="tipoSelecionado" id="tipoSelecionado">
                       <option value="" selected disabled>Tipo do item:</option>
                       <option value="lanches">Lanches</option>
                       <option value="pizzas">Pizzas</option>
@@ -156,7 +107,11 @@ require_once '../../includes/config.php';
                       <option value="frutas">Frutas</option>
 
               </select>
-
+              <div class="error-message-container">
+                <?php if ($error): ?>
+                  <div class="error-message"><?php echo $error; ?></div>
+                <?php endif;?>   
+              </div>
               <div class="form-group">
                 <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit"> Cadastrar novo item </button>
               </div>
@@ -169,7 +124,6 @@ require_once '../../includes/config.php';
 
 
       <!-- EDITAR ITEMS CARDAPIOS -->
-      <!-- FAZER LOOPING PARA EXIBIR -->
       <section class="module" id="menu">
         <div class="container">
           <div class="row">
@@ -177,43 +131,52 @@ require_once '../../includes/config.php';
               <h2 class="module-title font-alt">Editar Cardápio</h2>
             </div>
           </div>
-      <!-- ITENS CADASTRADO -->
 
           <div class="row multi-columns-row">
             <div class="col-sm-6">
               <div class="menu ">
                 <div class = "row">
-                  <div class="col-sm-8">
-                    <select class="form-control" id="itemSelecionado">
-                      <option value = "" selected disabled>Selecionar:</option>  
-                      <option value="item1">Wild Mushroom Bucatini with Kale</option>
-                      <option value="item2">Outro Item do Cardápio</option>
-                    </select>
-                    <h4 class="form-control menu-title mt-10 mb-10">Mushroom / Veggie / White Sources</h4>
-                    <h4 class="form-control menu-title mt-10 mb-10">$10.5</h4>
-                  </div>
+                <div class="col-sm-8">
+                  <select class="form-control" id="itemSelecionado">
+                    <option value="" selected disabled>Selecionar:</option>
+                    <?php foreach ($cardapio as $item): ?>
+                      <option value="<?php echo $item['pk_id_menu']; ?>">
+                      
+                        <?php echo $item['name_product_menu']; ?>
+                      </option>
+                    <?php endforeach; ?>
+                    
+                  </select>
                 </div>
               </div>
             </div>
+          </div>
            
            <!-- OPCAO EDITAR -->
             <div class="col-sm-6">
               <div class="menu ">
                 <div class="row">
                 <div>
+                <form method = "post" action = "formEdita.php">
                   <div class="col-sm-8">
                     <input class="form-control  mb-10" id="nomeItem" name="nomeItem" placeholder="Novo Titulo" required="required" />
-                    <input class="form-control  mt-10 mb-10" id="acompanhamento" name="Novo acompanhamento" placeholder="Acompanhamentos" required="required" />
-                    <input class="form-control  mt-10 mb-10" id="preco" name="preco" placeholder="Preço" required="required"/>
+                    <input class="form-control  mt-10 mb-10" id="acompanhamento" name="Novo acompanhamento" placeholder="Novo Acompanhamento"/>
+                    <input class="form-control  mt-10 mb-10" id="preco" name="preco" placeholder="Novo Preço" required="required"/>
                   </div>
                   <div class="col-sm-4 menu-price-detail">
                     <button class="btn btn-g btn-round btn-block btn-lg mt-10 mb-20" id="rfsubmit" type="submit"> Concluir </button>
+                </form>    
                     <button class="btn btn-g btn-round btn-block btn-lg mt-20 mb-10" id="rfsubmit" type="submit"> Apagar </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="error-message-container">
+          <?php if ($error): ?>
+            <div class="error-message"><?php echo $error; ?></div>
+          <?php endif;?>   
         </div>
       </section>
     </section>

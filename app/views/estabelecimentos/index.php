@@ -36,7 +36,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                   <a class="content-box" href="cardapio/?id=<?php echo $estabelecimento['pk_id_register']; ?>">
                       <div class="content-box-image">
-                          <img src="<?php echo $estabelecimento['image_info']; ?>" alt="Logo do estabelecimento">
+                          <img src="<?php echo $estabelecimento['image']; ?>" alt="Logo do estabelecimento">
                       </div>
                       <h3 class="content-box-title font-serif"><?php echo $estabelecimento['name_register']; ?></h3>
                   </a>

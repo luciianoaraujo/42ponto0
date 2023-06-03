@@ -15,6 +15,9 @@
                         <a class="btn btn-border-w mt-5 btn-circle" href="<?php echo BASEURL; ?>pages/logout/">
                           <i class="icon-play"></i> > Logout
                         </a>
+                        <a class="btn btn-border-w mt-5 btn-circle" href="<?php echo BASEURL; ?>pages/dashboard/">
+                          <i class="icon-play"></i> > Dashboard
+                        </a>
               <?php else: ?>
                         <a class="btn btn-border-w mt-5 btn-circle" href="<?php echo BASEURL; ?>pages/login/">
                           <i class="icon-play"></i> > Login

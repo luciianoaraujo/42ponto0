@@ -14,7 +14,9 @@ $routes = [
     '/42ponto0/app/pages/estabelecimentos/cardapio/' => [CardapioController::class, 'showCardapio'],
     '/42ponto0/app/pages/login' => [LoginController::class, 'handleLoginForm'],
     '/42ponto0/app/pages/register' => [RegisterController::class, 'handleRegisterForm'],
-    '/42ponto0/app/pages/dashboard' => [DashboardController::class, 'showDashboard']
+    '/42ponto0/app/pages/dashboard' => [DashboardController::class, 'showDashboard'],
+    '/42ponto0/app/pages/dashboard/formCadastra.php' => [DashboardController::class, 'cadastrarNovoItem'],
+    '/42ponto0/app/pages/dashboard/formEdita.php' => [DashboardController::class, 'editarItemCardapio'],
     
 ];
 

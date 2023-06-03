@@ -37,9 +37,8 @@ class RegisterController
     
         $userModel = new RegisterModel;
         $userModel->createEstabelecimento($nome, $cnpj, $email, $password, $telefone);
-        $estabelecimentoId = $userModel->getConnection()->lastInsertId();
     
-        header('Location: /42ponto0/app/pages/dashboard/?id=' . $estabelecimentoId);
+        header('Location: /42ponto0/app/pages/dashboard');
     }
 
     private function render($view, $data)

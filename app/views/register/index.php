@@ -92,7 +92,10 @@
                           <input class="form-control" id="register-password" type="password" name="register_password" placeholder="Password" />
                         </div>
                         <div class="form-group">
-                          <input class="form-control" id="register-telefone" type="text" name="register_telefone" placeholder="Phone" />
+                          <input class="form-control" id="register-telefone" type="text" name="register_telefone" placeholder="Telefone" />
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" id="register-imagem" type="text" name="register_imagem" placeholder="Link Logotipo" />
                         </div>
                         <div class="form-group">
                           <button class="btn btn-round btn-b btn-circle" type="submit">Register</button>

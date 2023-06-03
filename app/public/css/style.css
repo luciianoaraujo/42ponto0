@@ -2943,3 +2943,16 @@ Google map
   margin-top: 10px;
   
 }
+
+.success-message-container {
+  margin-bottom: 10px; /* Espaçamento inferior para separar a mensagem de erro do formulário */
+}
+
+.succes-message{
+  background-color: #ffdddd; /* Cor de fundo da mensagem de success */
+  color: green; /* Cor do texto da mensagem de success */
+  padding: 10px; /* Espaçamento interno da mensagem de success */
+  border: 1px solid #00ff22; /* Borda da mensagem de success */
+  border-radius: 4px; /* Arredondamento da borda da mensagem de success */
+  margin-top: 10px;
+}

@@ -18,8 +18,8 @@ class LoginController
 
     public function showLoginForm($error = null)
     {
-        $data = ['error' => $error,
-                '0'];
+        $data = ['error' => $error];
+                
 
         $this->render('../../views/login/index.php', $data);
     }
@@ -34,7 +34,7 @@ class LoginController
             
             if ($user) {
                 $_SESSION['user'] = $user;
-                header("Location: /42ponto0/app/pages/dashboard");
+                header('Location: /42ponto0/app/pages/dashboard');
                 exit;
             } else {
                $error = 'Credenciais inválidas. Por favor, tente novamente.';
