@@ -28,15 +28,15 @@ class RegisterController
         $email = $_POST['register_email'];
         $password = $_POST['register_password'];
         $telefone = $_POST['register_telefone'];
-
-        if (empty($nome) || empty($cnpj) || empty($email) || empty($password) || empty($telefone)) {
+        $imagem = $_POST['register_imagem'];
+        if (empty($nome) || empty($cnpj) || empty($email) || empty($password) || empty($telefone) || empty($imagem)) {
             $error = 'Todos os campos são obrigatórios.';
             $this->showRegisterForm($error);
             return;
         }
     
         $userModel = new RegisterModel;
-        $userModel->createEstabelecimento($nome, $cnpj, $email, $password, $telefone);
+        $userModel->createEstabelecimento($nome, $cnpj, $email, $password, $telefone, $imagem);
     
         header('Location: /42ponto0/app/pages/dashboard');
     }
