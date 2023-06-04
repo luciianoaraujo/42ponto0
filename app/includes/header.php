@@ -16,7 +16,7 @@
         <?php if (isset($_SESSION['user'])) : ?>
           <li>
             <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/logout/">
-              <i class="icon-play"></i> > Logout
+              <i class="icon-play"></i> - Logout
             </a>
           </li>
           <li>
