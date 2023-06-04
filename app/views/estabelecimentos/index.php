@@ -38,7 +38,7 @@
                       <div class="content-box-image">
                           <img src="<?php echo $estabelecimento['image']; ?>" alt="Logo do estabelecimento">
                       </div>
-                      <h3 class="content-box-title font-serif"><?php echo $estabelecimento['name_register']; ?></h3>
+                      <h3 class="content-box-title font-open ng"><?php echo $estabelecimento['name_register']; ?></h3>
                   </a>
               </div>
             <?php endforeach; ?>

@@ -44,8 +44,8 @@
         <div class="collapse navbar-collapse" id="custom-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/register/">
-                <i class="icon-play"></i> + Seja parceiro
+              <a class="btn btn-circle font-open ng up" href="<?php echo BASEURL; ?>pages/register/">
+                <i class="icon-play font-open ng up"></i> + Seja parceiro
               </a>
             </li>
             </li>
@@ -63,7 +63,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-              <h1 class="module-title font-alt mb-0"></h1>
+              <h1 class="module-title font-open ng up mb-0"></h1>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-              <h1 class="module-title font-alt mb-0">Login</h1>
+              <h1 class="module-title font-open ng up mb-0">Realize o Login</h1>
               <hr class="divider-w mb-10">
               <!-- FORM POST -->
               <form class="form" method="post">
@@ -80,18 +80,18 @@
                   <div class="panel panel-default">
                     <!-- LOGIN -->
                     <div class="panel-heading">
-                      <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Login</a></h4>
+                      <h4 class="panel-title font-open ng "><a data-toggle="collapse" data-parent="#accordion" href="#support1">Login</a></h4>
                     </div>
                     <div class="panel-collapse collapse in" id="support1">
                       <div class="panel-body">
                         <div class="form-group">
-                          <input class="form-control" id="login-email" type="text" name="login-email" placeholder="Email" />
+                          <input class="form-control font-open up" id="login-email" type="text" name="login-email" placeholder="Email" />
                         </div>
                         <div class="form-group">
-                          <input class="form-control" id="login-password" type="password" name="login-password" placeholder="Password" />
+                          <input class="form-control font-open up" id="login-password" type="password" name="login-password" placeholder="Password" />
                         </div>
                         <div class="form-group">
-                          <button class="btn btn-round btn-b btn-circle" type="submit">Login</button>
+                          <button class="btn btn-round btn-b btn-circle font-open ng up" type="submit">Login</button>
                           <div class="error-message-container">
                             <?php if ($error) : ?>
                               <div class="error-message"><?php echo $error; ?></div>

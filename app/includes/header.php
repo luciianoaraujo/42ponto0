@@ -15,23 +15,23 @@
       <ul class="nav navbar-nav navbar-right">
         <?php if (isset($_SESSION['user'])) : ?>
           <li>
-            <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/logout/">
-              <i class="icon-play"></i> > Logout
+            <a class="btn btn-circle font-open up ng" href="<?php echo BASEURL; ?>pages/logout/">
+              <i class="icon-play"></i> - Logout
             </a>
           </li>
           <li>
-            <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/dashboard/">
+            <a class="btn btn-circle font-open up ng" href="<?php echo BASEURL; ?>pages/dashboard/">
               <i class="icon-play"></i> > Dashboard
             </a>
           </li>
         <?php else : ?>
           <li>
-            <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/login/">
+            <a class="btn btn-circle font-open up ng" href="<?php echo BASEURL; ?>pages/login/">
               <i class="icon-play"></i> > Login
             </a>
           </li>
           <li>
-            <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/register/">
+            <a class="btn btn-circle font-open up ng" href="<?php echo BASEURL; ?>pages/register/">
               <i class="icon-play"></i> + Seja parceiro
             </a>
           </li>

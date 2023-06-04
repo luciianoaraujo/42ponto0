@@ -45,7 +45,7 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a class="btn btn-circle" href="<?php echo BASEURL; ?>pages/login/">
+                <a class="btn btn-circle font-open up ng" href="<?php echo BASEURL; ?>pages/login/">
                   <i class="icon-play"></i> > Login
                 </a>
               </li>
@@ -70,7 +70,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">Cadastro</h1>
+                <h1 class="module-title font-open ng up mb-0">Realize o Cadastro</h1>
                 <hr class="divider-w mb-10">
                 <!-- FORM POST -->
                 <form class="form" method="post">
@@ -78,30 +78,30 @@
                     <div class="panel panel-default">
                       <!-- REGISTER -->
                       <div class="panel-heading">
-                        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Register</a></h4>
+                        <h4 class="panel-title font-open ng"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Register</a></h4>
                       </div>
                       <div class="panel-collapse collapse in" id="support2">
-                        <div class="panel-body">
+                        <div class="panel-body ">
                           <div class="form-group">
-                            <input class="form-control" id="register-nome" type="text" name="register_nome" placeholder="Nome" />
+                            <input class="form-control font-open up" id="register-nome" type="text" name="register_nome" placeholder="Nome" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control" id="register-cnpj" type="text" name="register_cnpj" placeholder="CNPJ" />
+                            <input class="form-control font-open up" id="register-cnpj" type="text" name="register_cnpj" placeholder="CNPJ" />
+                          </div>
+                          <div class="form-group"> 
+                            <input class="form-control font-open up" id="register-email" type="text" name="register_email" placeholder="Email" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control" id="register-email" type="text" name="register_email" placeholder="Email" />
+                            <input class="form-control font-open up" id="register-password" type="password" name="register_password" placeholder="Password" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control" id="register-password" type="password" name="register_password" placeholder="Password" />
+                            <input class="form-control font-open up" id="register-telefone" type="text" name="register_telefone" placeholder="Telefone" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control" id="register-telefone" type="text" name="register_telefone" placeholder="Telefone" />
+                            <input class="form-control font-open up" id="register-imagem" type="text" name="register_imagem" placeholder="Link Logotipo" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control" id="register-imagem" type="text" name="register_imagem" placeholder="Link Logotipo" />
-                          </div>
-                          <div class="form-group">
-                            <button class="btn btn-round btn-b btn-circle" type="submit">Register</button>
+                            <button class="btn btn-round btn-b btn-circle font-open ng up" type="submit">Register</button>
                           </div>
                           <div class="error-message-container">
                             <?php if ($error) : ?>
