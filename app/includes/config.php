@@ -1,4 +1,8 @@
 <?php
+
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+
     if ( !defined('ABSPATH') )
         define('ABSPATH', dirname(__FILE__) . '/');
 
@@ -9,14 +13,14 @@
         define('DB_PASSWORD', 'Eh17R]x3');
         define('DB_HOST', 'localhost');
         if ( !defined('BASEURL') )
-            define('BASEURL', 'https://42ponto0.faex.edu.br/42ponto0/app/');
+            define('BASEURL', '/42ponto0/app/');
     }else{
         define('DB_NAME', 'delivery');
         define('DB_USER', 'root');
         define('DB_PASSWORD', '');
         define('DB_HOST', 'localhost');
         if ( !defined('BASEURL') )
-            define('BASEURL', 'http://localhost/42ponto0/app/');
+            define('BASEURL', '/42ponto0/app/');
             
     }
 

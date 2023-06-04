@@ -6,7 +6,7 @@ use App\config\Database;
 use PDO;
 use PDOException;
 
-class EstabelecimentosModel
+class EstabelecimentosModel extends Database
 {
     private $conn;
 
