@@ -1,7 +1,3 @@
-<?php 
-require_once '../../includes/config.php'; 
-?>
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -19,13 +15,13 @@ require_once '../../includes/config.php';
     Favicons
     =============================================
     -->
-    <?php include_once ABSPATH.'../includes/favicons.php';?>
+    <?php include_once ABSPATH.'../../includes/favicons.php';?>
     
     <!--
     Stylesheets
     =============================================
     -->
-    <?php include_once ABSPATH.'../includes/stylesheets.php';?>
+    <?php include_once ABSPATH.'../../includes/stylesheets.php';?>
 
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -184,7 +180,7 @@ require_once '../../includes/config.php';
 
     <!-- FOOTER -->
     <?php
-        include '../../includes/footer.php';
+        include_once ABSPATH .'../../includes/footer.php';
     ?>
 
         <!--  
@@ -192,7 +188,7 @@ require_once '../../includes/config.php';
         =============================================
         -->
     <?php
-      include '../../includes/animations.php';
+      include_once ABSPATH .'../../includes/animations.php';
     ?>
   </body>
 </html>

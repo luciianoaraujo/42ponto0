@@ -1,8 +1,10 @@
 <?php 
-  require_once '../../includes/config.php'; 
-  require_once '../../../vendor/autoload.php';
-  require_once '../../config/routes.php';   
+    if ( !defined('ABSPATH') )
+    define('ABSPATH', dirname(__FILE__) . '/');
   
-  $url = $_SERVER['REQUEST_URI'];
-  handleRoute($url);
+    require_once ABSPATH . '../../includes/config.php'; 
+    require_once ABSPATH . '../../../vendor/autoload.php';
+    require_once ABSPATH . '../../config/routes.php';     
+    $url = $_SERVER['REQUEST_URI'];
+    handleRoute($url);
 ?>

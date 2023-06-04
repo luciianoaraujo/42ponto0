@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Estabelecimentos</title>
-    <?php include_once '../../includes/favicons.php';?>
-    <?php include_once '../../includes/stylesheets.php';?>
+    <?php include_once ABSPATH .'../../includes/favicons.php';?>
+    <?php include_once ABSPATH .'../../includes/stylesheets.php';?>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
       <?php
-        include '../../includes/header.php';
+        include_once ABSPATH . '../../includes/header.php';
       ?>
 
 
@@ -49,7 +49,7 @@
  
     <!-- FOOTER -->
     <?php
-        include '../../includes/footer.php';
+        include_once ABSPATH . '../../includes/footer.php';
     ?>
 
         <!--  
@@ -57,7 +57,7 @@
         =============================================
         -->
     <?php
-      include '../../includes/animations.php';
+      include_once ABSPATH . '../../includes/animations.php';
     ?>
   </body>
 </html>

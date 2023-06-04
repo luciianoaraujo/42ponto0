@@ -1,6 +1,7 @@
 <?php
 require_once 'includes/config.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -10,10 +11,10 @@ require_once 'includes/config.php';
     <title>42ponto0</title>
 
     <!-- Favicons -->
-    <?php include 'includes/favicons.php'; ?>
+    <?php include ABSPATH .'/favicons.php'; ?>
 
     <!-- Stylesheets -->
-    <?php include 'includes/stylesheets.php'; ?>
+    <?php include ABSPATH .'/stylesheets.php'; ?>
 
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -122,10 +123,10 @@ require_once 'includes/config.php';
         </section>
 
         <!-- FOOTER -->
-        <?php include 'includes/footer.php'; ?>
+        <?php include_once ABSPATH .'/footer.php'; ?>
 
         <!--JavaScripts -->
-        <?php include 'includes/animations.php'; ?>
+        <?php include_once ABSPATH .'/animations.php'; ?>
         
       </div>
     </main>

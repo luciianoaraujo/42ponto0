@@ -13,18 +13,18 @@
     Favicons
     =============================================
     -->
-    <?php include_once ABSPATH.'../includes/favicons.php';?>
+    <?php include_once ABSPATH.'../../../includes/favicons.php';?>
 
     <!--  
     Stylesheets
     =============================================
     -->
-    <?php include_once ABSPATH.'../includes/stylesheets.php';?>
+    <?php include_once ABSPATH.'../../../includes/stylesheets.php';?>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
       <?php
-        include '../../../includes/header.php'
+        include_once ABSPATH .'../../../includes/header.php'
       ?>      
       <div class="main">
         <section class="module bg-dark-30 parallax-bg restaurant-menu-bg" data-background="<?php echo BASEURL;?>public/images/restaurant/bg_lanches.jpg">
@@ -135,7 +135,7 @@
 
     <!-- FOOTER -->
     <?php
-        include '../../../includes/footer.php';
+        include_once ABSPATH .'../../../includes/footer.php';
     ?>
 
         <!--  
@@ -143,7 +143,7 @@
         =============================================
         -->
     <?php
-      include '../../../includes/animations.php';
+      include ABSPATH .'../../../includes/animations.php';
     ?>
   </body>
 </html>

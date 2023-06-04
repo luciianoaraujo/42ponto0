@@ -16,13 +16,13 @@
     Favicons
     =============================================
     -->
-  <?php include_once ABSPATH . '../includes/favicons.php'; ?>
+  <?php include_once ABSPATH . '../../includes/favicons.php'; ?>
 
   <!--  
     Stylesheets
     =============================================
     -->
-  <?php include_once ABSPATH . '../includes/stylesheets.php'; ?>
+  <?php include_once ABSPATH . '../../includes/stylesheets.php'; ?>
 
 </head>
 
@@ -121,7 +121,7 @@
         </section>
         <!-- FOOTER -->
         <?php
-        include '../../includes/footer.php';
+        include ABSPATH .'../../includes/footer.php';
         ?>
 
         <!--  
@@ -129,7 +129,7 @@
     =============================================
     -->
         <?php
-        include '../../includes/animations.php';
+        include ABSPATH .'../../includes/animations.php';
         ?>
 </body>
 

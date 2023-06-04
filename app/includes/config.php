@@ -9,7 +9,7 @@
         define('DB_PASSWORD', 'Eh17R]x3');
         define('DB_HOST', 'localhost');
         if ( !defined('BASEURL') )
-            define('BASEURL', '/');
+            define('BASEURL', 'https://42ponto0.faex.edu.br/42ponto0/app/');
     }else{
         define('DB_NAME', 'delivery');
         define('DB_USER', 'root');
