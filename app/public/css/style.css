@@ -2956,3 +2956,88 @@ Google map
   border-radius: 4px; /* Arredondamento da borda da mensagem de success */
   margin-top: 10px;
 }
+/* .menu {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: 1.2px;
+}
+
+.menu-detail {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+  letter-spacing: 1.2px;
+}
+
+.menu-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  letter-spacing: 1.2px;
+}
+*/
+
+.menu {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+}
+
+.menu:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.menu-detail {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.menu-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  margin-top: 10px;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.menu-price:before {
+  content: "R$";
+} 
+
+@media (max-width: 767px) {
+  .menu-title {
+      text-align: center;
+  }
+
+  .menu-price {
+      text-align: center;
+      margin-top: 5px;
+  }
+}

@@ -38,101 +38,32 @@
             </div>
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="module-title font-alt mb-0">Lanches</h2>
+                <h2 class="module-title font-alt mb-0">Nosso Cardápio</h2>
               </div>
             </div>
           </div>
         </section>
         <section class="module">
-          <div class="container">
+        <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-sm-4">
-                <div class="menu">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-                      <div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
+                <?php foreach ($cardapio as $item) : ?>
+                    <div class="col-sm-4">
+                        <div class="menu">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="menu-title font-alt"><?php echo $item['name_product_menu']; ?></h4>
+                                    <?php if (isset($item['acommpaniments_product_menu'])) : ?>
+                                        <div class="menu-detail font-serif"><?php echo $item['acommpaniments_product_menu']; ?></div>
+                                    <?php endif; ?>
+                                    <div class="menu-price font-alt"><?php echo $item['preco_product_menu']; ?></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-4 menu-price-detail">
-                      <h4 class="menu-price font-alt">$10.5</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <?php endforeach; ?>
             </div>
-          </div>
-        </section>
-
-        <section class="module bg-dark-30 parallax-bg restaurant-menu-bg" data-background="<?php echo BASEURL;?>public/images/restaurant/bg_entradas.jpg">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-2 col-sm-offset-5">
-                <div class="alt-module-subtitle"><span class="holder-w"></span>
-                  <h5 class="font-serif">Abaixo</h5><span class="holder-w"></span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="module-title font-alt mb-0">Entradas</h2>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module">
-          <div class="container">
-            <div class="row multi-columns-row">
-              <div class="col-sm-4">
-                <div class="menu">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-                      <div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-                    </div>
-                    <div class="col-sm-4 menu-price-detail">
-                      <h4 class="menu-price font-alt">$10.5</h4>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </section>
-        <section class="module bg-dark-30 parallax-bg restaurant-menu-bg" data-background="<?php echo BASEURL;?>public/images/restaurant/bg_pratos.webp">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-2 col-sm-offset-5">
-                <div class="alt-module-subtitle"><span class="holder-w"></span>
-                  <h5 class="font-serif">Abaixo</h5><span class="holder-w"></span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="module-title font-alt mb-0">Pratos Principais</h2>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module">
-          <div class="container">
-            <div class="row multi-columns-row">
-              <div class="col-sm-4">
-                <div class="menu">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-                      <div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-                    </div>
-                    <div class="col-sm-4 menu-price-detail">
-                      <h4 class="menu-price font-alt">$10.5</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        </div>
+    </section>
     <!-- FOOTER -->
     <?php
         include_once ABSPATH .'../../../includes/footer.php';
