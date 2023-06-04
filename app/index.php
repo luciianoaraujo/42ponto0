@@ -35,8 +35,8 @@ require_once 'includes/config.php';
         <div class="titan-caption">
           <div class="caption-content">
             <div class="container">
-              <div class="font-alt"><b>Bem Vindo</b></div>
-              <div class="font-alt mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL; ?>pages/estabelecimentos"><i class="icon-play"></i> Restaurantes </a></div>
+              <div class="font-open up ng sp "><b>Bem Vindo</b></div>
+              <div class="font-open up ng mt-30"><a class="btn btn-border-w btn-circle" href="<?php echo BASEURL; ?>pages/estabelecimentos"><i class="icon-play"></i> Restaurantes </a></div>
             </div>
           </div>
         </div>
@@ -48,8 +48,8 @@ require_once 'includes/config.php';
             <div class="row">
               <div class="col-sm-6"><img src="<?php echo BASEURL; ?>public/images/landing/why_choose.png" alt=""></div>
               <div class="col-sm-6">
-                <h2 class="module-title font-alt align-left">Por que escolher 42ponto0?</h2>
-                <p class="module-subtitle font-serif align-left">Impulsione o seu negócio com o 42pont0 - a solução perfeita para seu estabelecimento. Tenha controle total, design atrativo e aumento nas vendas. Descubra o poder da simplicidade e transforme sua experiência gastronômica.</p>
+                <h2 class="module-title font-open align-left">POR QUE ESCOLHER 42ponto0?</h2>
+                <p class="module-subtitle font-open align-left">Impulsione o seu negócio com o 42pont0 - a solução perfeita para seu estabelecimento. Tenha controle total, design atrativo e aumento nas vendas. Descubra o poder da simplicidade e transforme sua experiência gastronômica.</p>
               </div>
             </div>
           </div>
@@ -61,23 +61,23 @@ require_once 'includes/config.php';
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-strategy"></span></div>
-                  <h3 class="alt-features-title font-alt">Identidade Visual</h3>
-                  <p>Destaque-se com uma identidade visual única e memorável, que representa perfeitamente a essência do seu negócio.</p>
+                  <h3 class="alt-features-title font-open up ng">Identidade Visual</h3>
+                  <p class="font-open">Destaque-se com uma identidade visual única e memorável, que representa perfeitamente a essência do seu negócio.</p>
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="alt-features-title font-alt">Desenvolvedores</h3>
-                  <p>Equipe de desenvolvedores especializados dedicados a aprimorar a experiência do usuário.</p>
+                  <h3 class="alt-features-title font-open up ng">Desenvolvedores</h3>
+                  <p class="font-open">Equipe de desenvolvedores especializados dedicados a aprimorar a experiência do usuário.</p>
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-target"></span></div>
-                  <h3 class="alt-features-title font-alt">Marketing</h3>
-                  <p>Alcançamos o seu público-alvo com estratégias de marketing eficazes para aumentar a visibilidade e a adoção do nosso app.</p>
+                  <h3 class="alt-features-title font-open up ng">Marketing</h3>
+                  <p class="font-open">Alcançamos o seu público-alvo com estratégias de marketing eficazes para aumentar a visibilidade e a adoção do nosso app.</p>
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="alt-features-title font-alt">Design</h3>
-                  <p>Design atraente e intuitivo que proporciona uma experiência de usuário excepcional ao navegar pelo nosso app de cardápio online.</p>
+                  <h3 class="alt-features-title font-open up ng">Design</h3>
+                  <p class="font-open">Design atraente e intuitivo que proporciona uma experiência de usuário excepcional ao navegar pelo nosso app de cardápio online.</p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3"></div>
@@ -93,8 +93,8 @@ require_once 'includes/config.php';
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Como será o app?</h2>
-                <div class="module-subtitle font-serif">Trabalhamos para que o design seja o mais intuitivo possível, priorizamos a acessibilidade do usuário.</div>
+                <h2 class="module-title font-open up ng">Como será o app?</h2>
+                <div class="module-subtitle font-open">Trabalhamos para que o design seja o mais intuitivo possível, priorizamos a acessibilidade do usuário.</div>
               </div>
             </div>
             <div class="row client">

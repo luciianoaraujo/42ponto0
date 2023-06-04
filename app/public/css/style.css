@@ -857,6 +857,24 @@ a,
 /*--------------------------------------------------------------
 	Typography
 --------------------------------------------------------------*/
+/*---
+  MyFonts
+---*/
+.font-open {
+  font-family: 'Open Sans', sans-serif;
+}
+.up{
+  text-transform: uppercase;
+}
+.ng{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.sp{
+  letter-spacing: 10px;
+}
+
 a {
   color: #111;
 }
