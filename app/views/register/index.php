@@ -83,22 +83,22 @@
                       <div class="panel-collapse collapse in" id="support2">
                         <div class="panel-body ">
                           <div class="form-group">
-                            <input class="form-control font-open up" id="register-nome" type="text" name="register_nome" placeholder="Nome" />
+                            <input class="form-control font-open ng" id="register-nome" type="text" name="register_nome" placeholder="Nome" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control font-open up" id="register-cnpj" type="text" name="register_cnpj" placeholder="CNPJ" />
-                          </div>
-                          <div class="form-group"> 
-                            <input class="form-control font-open up" id="register-email" type="text" name="register_email" placeholder="Email" />
+                            <input class="form-control font-open ng" id="register-cnpj" type="text" name="register_cnpj" placeholder="CNPJ" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control font-open up" id="register-password" type="password" name="register_password" placeholder="Password" />
+                            <input class="form-control font-open ng" id="register-email" type="text" name="register_email" placeholder="Email" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control font-open up" id="register-telefone" type="text" name="register_telefone" placeholder="Telefone" />
+                            <input class="form-control font-open ng" id="register-password" type="password" name="register_password" placeholder="Password" />
                           </div>
                           <div class="form-group">
-                            <input class="form-control font-open up" id="register-imagem" type="text" name="register_imagem" placeholder="Link Logotipo" />
+                            <input class="form-control font-open ng" id="register-telefone" type="text" name="register_telefone" placeholder="Telefone" />
+                          </div>
+                          <div class="form-group">
+                            <input class="form-control font-open ng" id="register-imagem" type="text" name="register_imagem" placeholder="Link Logotipo" />
                           </div>
                           <div class="form-group">
                             <button class="btn btn-round btn-b btn-circle font-open ng up" type="submit">Register</button>
@@ -121,7 +121,7 @@
         </section>
         <!-- FOOTER -->
         <?php
-        include ABSPATH .'../../includes/footer.php';
+        include ABSPATH . '../../includes/footer.php';
         ?>
 
         <!--  
@@ -129,7 +129,7 @@
     =============================================
     -->
         <?php
-        include ABSPATH .'../../includes/animations.php';
+        include ABSPATH . '../../includes/animations.php';
         ?>
 </body>
 

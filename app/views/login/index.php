@@ -85,10 +85,10 @@
                     <div class="panel-collapse collapse in" id="support1">
                       <div class="panel-body">
                         <div class="form-group">
-                          <input class="form-control font-open up" id="login-email" type="text" name="login-email" placeholder="Email" />
+                          <input class="form-control font-open ng" id="login-email" type="text" name="login-email" placeholder="Email" />
                         </div>
                         <div class="form-group">
-                          <input class="form-control font-open up" id="login-password" type="password" name="login-password" placeholder="Password" />
+                          <input class="form-control font-open ng" id="login-password" type="password" name="login-password" placeholder="Password" />
                         </div>
                         <div class="form-group">
                           <button class="btn btn-round btn-b btn-circle font-open ng up" type="submit">Login</button>
@@ -110,7 +110,7 @@
       </section>
       <!-- FOOTER -->
       <?php
-      include_once ABSPATH .'../../includes/footer.php';
+      include_once ABSPATH . '../../includes/footer.php';
       ?>
 
       <!--  
@@ -118,7 +118,7 @@
     =============================================
     -->
       <?php
-      include ABSPATH .'../../includes/animations.php';
+      include ABSPATH . '../../includes/animations.php';
       ?>
 </body>
 
