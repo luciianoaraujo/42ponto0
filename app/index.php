@@ -116,9 +116,6 @@ require_once 'includes/config.php';
               <div class="owl-item">
                 <div class="col-sm-12"><img src="<?php echo BASEURL; ?>public/images/landing/screens/Mockup5.png" alt="App Screenshot"></div>
               </div>
-              <div class="owl-item">
-                <div class="col-sm-12"><img src="<?php echo BASEURL; ?>public/images/landing/screens/Mockup4.png" alt="App Screenshot"></div>
-              </div>
             </div>
           </div>
         </div>
