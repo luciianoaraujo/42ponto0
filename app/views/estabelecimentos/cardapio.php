@@ -27,7 +27,7 @@
         include_once ABSPATH .'../../../includes/header.php'
       ?>      
       <div class="main">
-        <section class="module bg-dark-30 parallax-bg restaurant-menu-bg" data-background="<?php echo BASEURL;?>public/images/restaurant/bg_lanches.jpg">
+        <section class="module bg-dark-30 parallax-bg restaurant-menu-bg"  data-background="<?php echo BASEURL;?>public/images/restaurant/bg_lanches.jpg">
           <div class="container">
             <div class="row">
               <div class="col-sm-2 col-sm-offset-5">
@@ -43,7 +43,7 @@
             </div>
           </div>
         </section>
-        <section class="module">
+        <section class="module" style="min-height: 61.2vh;">
         <div class="container">
             <div class="row multi-columns-row">
                 <?php foreach ($cardapio as $item) : ?>
