@@ -19,7 +19,7 @@ class EstabelecimentosModel extends Database
     public function getAllEstabelecimentos()
     {
         try {
-            $query = "SELECT name_register, image, pk_id_register FROM TB_REGISTER_RESTAURANT";
+            $query = "SELECT name_register, image, pk_id_register FROM tb_register_restaurant";
                       
 
             $stmt = $this->conn->prepare($query);
