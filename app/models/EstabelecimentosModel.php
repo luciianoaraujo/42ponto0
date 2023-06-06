@@ -32,10 +32,4 @@ class EstabelecimentosModel extends Database
             return [];
         }
     }
-
-    
-
-
-
-
 }               
